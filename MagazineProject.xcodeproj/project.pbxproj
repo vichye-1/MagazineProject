@@ -16,6 +16,7 @@
 		EFC8FA952C01C3F500178594 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA942C01C3F500178594 /* TravelTableViewController.swift */; };
 		EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA962C01C40700178594 /* TravelTableViewCell.swift */; };
 		EFC8FA992C01CC9C00178594 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */; };
+		EFC8FA9C2C01D34300178594 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFC8FA9B2C01D34300178594 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFC8FA9C2C01D34300178594 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = MagazineProject;
+			packageProductDependencies = (
+				EFC8FA9B2C01D34300178594 /* Kingfisher */,
+			);
 			productName = MagazineProject;
 			productReference = EFC8FA7D2C01BF9600178594 /* MagazineProject.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = EFC8FA742C01BF9600178594;
+			packageReferences = (
+				EFC8FA9A2C01D34300178594 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EFC8FA7E2C01BF9600178594 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -383,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFC8FA9A2C01D34300178594 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFC8FA9B2C01D34300178594 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFC8FA9A2C01D34300178594 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFC8FA752C01BF9600178594 /* Project object */;
 }

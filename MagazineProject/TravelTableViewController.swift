@@ -36,11 +36,12 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "magazineCell", for: indexPath) as! TravelTableViewCell
         
-        // dateforamtter 이용해서 string -> yy년 MM월 dd일 형식으로 변환
+        // kingfisher 라이브러리 사용해서 url상의 image 가져오기
         let data = list[indexPath.row]
         let urlString = data.photo_image
         let url = URL(string: urlString)
         
+        // dateforamtter 이용해서 string -> yy년 MM월 dd일 형식으로 변환
         let date = data.date
         let myFormatter = DateFormatter()
         myFormatter.dateFormat = "yyMMdd"

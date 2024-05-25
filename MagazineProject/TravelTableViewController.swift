@@ -36,23 +36,21 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "magazineCell", for: indexPath) as! TravelTableViewCell
         
+        // dateforamtter 이용해서 string -> yy년 MM월 dd일 형식으로 변환
         let data = list[indexPath.row]
         let urlString = data.photo_image
         let url = URL(string: urlString)
         
-        let dateString = data.date
+        let date = data.date
         let myFormatter = DateFormatter()
         myFormatter.dateFormat = "yyMMdd"
-        guard let finalDate = myFormatter.date(from: dateString) else {
-            cell.dateLabel.text = ""
-            return cell
-        }
         
-        let dateOutterFormat = DateFormatter()
-        dateOutterFormat.dateFormat = "yy년 MM월 dd일"
-        let finalDateString = dateOutterFormat.string(from: finalDate)
-        cell.dateLabel.text = finalDateString
-                        
+        let convertDate = myFormatter.date(from: date)
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yy년 MM월 dd일"
+        let convertStr = dateformatter.string(from: convertDate!)
+        
         cell.MagazineImageView.kf.setImage(with: url)
         cell.MagazineImageView.contentMode = .scaleToFill
         cell.MagazineImageView.layer.cornerRadius = 15
@@ -69,11 +67,11 @@ class TravelTableViewController: UITableViewController {
         cell.subtitleLabel.font = .boldSystemFont(ofSize: 17)
         cell.subtitleLabel.textAlignment = .left
         
-        cell.dateLabel.text = data.date
+        cell.dateLabel.text = convertStr
         cell.dateLabel.textAlignment = .right
+        cell.dateLabel.textColor = .lightGray
+        cell.dateLabel.font = .boldSystemFont(ofSize: 15)
         
         return cell
     }
-    
-    
 }

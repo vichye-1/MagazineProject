@@ -159,13 +159,19 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한식, 영등포" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLk-Pa-ZJV">
-                                            <rect key="frame" x="144" y="19" width="194" height="20.333333333333329"/>
+                                            <rect key="frame" x="144" y="19" width="194" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="n1E-eL-MvY"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식점명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-A4-q2V">
-                                            <rect key="frame" x="144" y="43.333333333333336" width="194" height="20.333333333333336"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="음식점명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-A4-q2V">
+                                            <rect key="frame" x="144" y="39" width="194" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="gfh-pO-6Sw"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -202,7 +208,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Xec-1b-xNT" firstAttribute="centerY" secondItem="JlM-d1-wLs" secondAttribute="centerY" id="0Jg-1h-3qN"/>
-                                        <constraint firstItem="MEg-A4-q2V" firstAttribute="top" secondItem="uLk-Pa-ZJV" secondAttribute="bottom" constant="4" id="3BE-PJ-p1l"/>
+                                        <constraint firstItem="MEg-A4-q2V" firstAttribute="top" secondItem="uLk-Pa-ZJV" secondAttribute="bottom" id="3BE-PJ-p1l"/>
                                         <constraint firstItem="rJk-Qt-8JK" firstAttribute="top" secondItem="JlM-d1-wLs" secondAttribute="topMargin" constant="3" id="7e1-W7-c66"/>
                                         <constraint firstItem="wsx-xx-oOt" firstAttribute="top" secondItem="JlM-d1-wLs" secondAttribute="top" constant="16" id="8Dj-q6-Syb"/>
                                         <constraint firstItem="wsx-xx-oOt" firstAttribute="centerY" secondItem="JlM-d1-wLs" secondAttribute="centerY" id="L5f-6p-0Th"/>
@@ -226,7 +232,7 @@
                                     <outlet property="nameLabel" destination="MEg-A4-q2V" id="E0P-PY-RdW"/>
                                     <outlet property="priceLabel" destination="4pU-Qu-qIu" id="FCZ-rN-itg"/>
                                     <outlet property="restaurantImage" destination="wsx-xx-oOt" id="bL5-lb-6Sk"/>
-                                    <outlet property="saveLabel" destination="Xec-1b-xNT" id="o4z-CI-lkc"/>
+                                    <outlet property="saveButton" destination="Xec-1b-xNT" id="o4z-CI-lkc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

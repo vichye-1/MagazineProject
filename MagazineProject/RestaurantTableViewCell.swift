@@ -13,5 +13,5 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var locationInfoLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var saveLabel: UIButton!
+    @IBOutlet var saveButton: UIButton!
 }

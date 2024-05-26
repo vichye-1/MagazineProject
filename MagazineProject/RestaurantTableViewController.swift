@@ -14,13 +14,11 @@ class RestaurantTableViewController: UITableViewController {
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var searchButton: UIButton!
     
-    let list = RestaurantList().restaurantArray
+    var list = RestaurantList().restaurantArray
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         searchViewUI()
-
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -62,10 +60,37 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationInfoLabel.textColor = .lightGray
         cell.locationInfoLabel.font = .systemFont(ofSize: 13)
         
+        // 음식점명
+        let name = data.name
         
+        cell.nameLabel.text = name
+        cell.nameLabel.font = .boldSystemFont(ofSize: 15)
+        cell.nameLabel.numberOfLines = 0
         
+        // 가격대
+        let price = data.price
+        
+        cell.priceLabel.text = "\(price.formatted()) 원대"
+        cell.priceLabel.font = .systemFont(ofSize: 13)
+        cell.priceLabel.textColor = .lightGray
+        
+        // 저장 버튼
+        let bookmark = data.like ? "bookmark.fill" : "bookmark"
+        let image = UIImage(systemName: bookmark)
+        
+        cell.saveButton.tag = indexPath.row
+        cell.saveButton.setImage(image, for: .normal)
+        cell.saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
+        cell.saveButton.backgroundColor = .lightGray
+        cell.saveButton.layer.cornerRadius = cell.saveButton.layer.frame.size.width / 2
+        cell.saveButton.tintColor = .white
         
         return cell
+    }
+    
+    @objc fileprivate func saveButtonClicked(sender: UIButton) {
+        list[sender.tag].like.toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
     

@@ -33,9 +33,9 @@ class RestaurantTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath) as! RestaurantTableViewCell
+        let data = list[indexPath.row]
         
         // image
-        let data = list[indexPath.row]
         let urlString = data.image
         let url = URL(string: urlString)
         
@@ -52,6 +52,15 @@ class RestaurantTableViewController: UITableViewController {
         cell.indexLabel.textAlignment = .center
         cell.indexLabel.textColor = .white
         cell.indexLabel.font = .boldSystemFont(ofSize: 17)
+        
+        // category, address(일부)
+        let typeOfFood = data.category
+        let addressSegment = data.address.components(separatedBy: " ")
+        
+        cell.locationInfoLabel.text = "\(typeOfFood) · \(addressSegment[1])"
+        cell.locationInfoLabel.textAlignment = .left
+        cell.locationInfoLabel.textColor = .lightGray
+        cell.locationInfoLabel.font = .systemFont(ofSize: 13)
         
         
         

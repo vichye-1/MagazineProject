@@ -159,13 +159,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한식, 영등포" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLk-Pa-ZJV">
-                                            <rect key="frame" x="140" y="19" width="198" height="20.333333333333329"/>
+                                            <rect key="frame" x="144" y="19" width="194" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="음식점명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-A4-q2V">
-                                            <rect key="frame" x="140" y="43.333333333333336" width="198" height="20.333333333333336"/>
+                                            <rect key="frame" x="144" y="43.333333333333336" width="194" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -183,7 +183,7 @@
                                             </buttonConfiguration>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격대" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-Qu-qIu">
-                                            <rect key="frame" x="140" y="113.66666666666667" width="198" height="20.333333333333329"/>
+                                            <rect key="frame" x="144" y="113.66666666666667" width="194" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -209,15 +209,15 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="4pU-Qu-qIu" secondAttribute="bottom" constant="8" id="MA4-RP-LYH"/>
                                         <constraint firstItem="wsx-xx-oOt" firstAttribute="leading" secondItem="JlM-d1-wLs" secondAttribute="leading" constant="16" id="NhS-D7-rrH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="4pU-Qu-qIu" secondAttribute="trailing" constant="35" id="P2L-OX-wxv"/>
-                                        <constraint firstItem="4pU-Qu-qIu" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="4" id="Wwy-Yk-CbO"/>
+                                        <constraint firstItem="4pU-Qu-qIu" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="8" id="Wwy-Yk-CbO"/>
                                         <constraint firstItem="uLk-Pa-ZJV" firstAttribute="top" secondItem="JlM-d1-wLs" secondAttribute="topMargin" constant="8" id="Xg2-G8-T2z"/>
-                                        <constraint firstItem="uLk-Pa-ZJV" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="4" id="Zyc-7W-HfV"/>
+                                        <constraint firstItem="uLk-Pa-ZJV" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="8" id="Zyc-7W-HfV"/>
                                         <constraint firstItem="rJk-Qt-8JK" firstAttribute="leading" secondItem="JlM-d1-wLs" secondAttribute="leadingMargin" id="bjw-YN-lCP"/>
                                         <constraint firstItem="Xec-1b-xNT" firstAttribute="leading" secondItem="MEg-A4-q2V" secondAttribute="trailing" constant="5" id="e3f-An-dnK"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Xec-1b-xNT" secondAttribute="trailing" id="kKO-de-Csi"/>
                                         <constraint firstAttribute="bottom" secondItem="wsx-xx-oOt" secondAttribute="bottom" constant="16" id="lA8-jE-Aph"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="uLk-Pa-ZJV" secondAttribute="trailing" constant="35" id="mjU-6j-Nd4"/>
-                                        <constraint firstItem="MEg-A4-q2V" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="4" id="uUb-HF-XW0"/>
+                                        <constraint firstItem="MEg-A4-q2V" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="8" id="uUb-HF-XW0"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -271,6 +271,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="smy-02-UnC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BuV-q8-Jhg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -16,7 +16,6 @@ struct Magazine {
     let link: String
 }
 
-
 class TravelTableViewController: UITableViewController {
     
     let list = MagazineInfo().magazine

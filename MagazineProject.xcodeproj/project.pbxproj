@@ -17,6 +17,9 @@
 		EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA962C01C40700178594 /* TravelTableViewCell.swift */; };
 		EFC8FA992C01CC9C00178594 /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */; };
 		EFC8FA9C2C01D34300178594 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFC8FA9B2C01D34300178594 /* Kingfisher */; };
+		EFC8FA9E2C02ED6100178594 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA9D2C02ED6100178594 /* RestaurantTableViewCell.swift */; };
+		EFC8FAA02C02ED7A00178594 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA9F2C02ED7A00178594 /* RestaurantTableViewController.swift */; };
+		EFC8FAA22C0377A900178594 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FAA12C0377A800178594 /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		EFC8FA942C01C3F500178594 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		EFC8FA962C01C40700178594 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
+		EFC8FA9D2C02ED6100178594 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		EFC8FA9F2C02ED7A00178594 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		EFC8FAA12C0377A800178594 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		EFC8FA7F2C01BF9600178594 /* MagazineProject */ = {
 			isa = PBXGroup;
 			children = (
+				EFC8FA9F2C02ED7A00178594 /* RestaurantTableViewController.swift */,
+				EFC8FA9D2C02ED6100178594 /* RestaurantTableViewCell.swift */,
 				EFC8FA962C01C40700178594 /* TravelTableViewCell.swift */,
 				EFC8FA942C01C3F500178594 /* TravelTableViewController.swift */,
 				EFC8FA802C01BF9600178594 /* AppDelegate.swift */,
@@ -74,6 +82,7 @@
 				EFC8FA8B2C01BF9700178594 /* LaunchScreen.storyboard */,
 				EFC8FA8E2C01BF9700178594 /* Info.plist */,
 				EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */,
+				EFC8FAA12C0377A800178594 /* Restaurant.swift */,
 			);
 			path = MagazineProject;
 			sourceTree = "<group>";
@@ -160,7 +169,10 @@
 				EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */,
 				EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */,
 				EFC8FA952C01C3F500178594 /* TravelTableViewController.swift in Sources */,
+				EFC8FA9E2C02ED6100178594 /* RestaurantTableViewCell.swift in Sources */,
+				EFC8FAA02C02ED7A00178594 /* RestaurantTableViewController.swift in Sources */,
 				EFC8FA992C01CC9C00178594 /* MagazineInfo.swift in Sources */,
+				EFC8FAA22C0377A900178594 /* Restaurant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

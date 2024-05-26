@@ -107,19 +107,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="Cyr-OZ-fMB">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="112"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="102"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25m-uc-DMX">
-                                    <rect key="frame" x="16" y="12" width="361" height="80"/>
+                                    <rect key="frame" x="16" y="12" width="361" height="70"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jeZ-nm-bmW">
-                                            <rect key="frame" x="8" y="23" width="265" height="34"/>
+                                            <rect key="frame" x="8" y="18" width="265" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTc-dU-0fm">
-                                            <rect key="frame" x="278" y="23.000000000000004" width="75" height="34.333333333333343"/>
+                                            <rect key="frame" x="278" y="18.000000000000004" width="75" height="34.333333333333343"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         </button>
@@ -130,7 +130,7 @@
                                         <constraint firstItem="jeZ-nm-bmW" firstAttribute="leading" secondItem="25m-uc-DMX" secondAttribute="leading" constant="8" id="Xp8-Jy-YzZ"/>
                                         <constraint firstItem="jeZ-nm-bmW" firstAttribute="centerY" secondItem="25m-uc-DMX" secondAttribute="centerY" id="Y29-kL-Aym"/>
                                         <constraint firstItem="jeZ-nm-bmW" firstAttribute="centerY" secondItem="wTc-dU-0fm" secondAttribute="centerY" id="cyZ-zC-OTe"/>
-                                        <constraint firstAttribute="height" constant="80" id="mGA-pf-zy5"/>
+                                        <constraint firstAttribute="height" constant="70" id="mGA-pf-zy5"/>
                                         <constraint firstAttribute="trailing" secondItem="wTc-dU-0fm" secondAttribute="trailing" constant="8" id="p1E-6C-CeR"/>
                                     </constraints>
                                 </view>
@@ -144,7 +144,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" rowHeight="153" id="gUl-9U-2QY" customClass="RestaurantTableViewCell" customModule="MagazineProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="162" width="393" height="153"/>
+                                <rect key="frame" x="0.0" y="152" width="393" height="153"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUl-9U-2QY" id="JlM-d1-wLs">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="153"/>
@@ -218,7 +218,7 @@
                                         <constraint firstItem="4pU-Qu-qIu" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="8" id="Wwy-Yk-CbO"/>
                                         <constraint firstItem="uLk-Pa-ZJV" firstAttribute="top" secondItem="JlM-d1-wLs" secondAttribute="topMargin" constant="8" id="Xg2-G8-T2z"/>
                                         <constraint firstItem="uLk-Pa-ZJV" firstAttribute="leading" secondItem="wsx-xx-oOt" secondAttribute="trailing" constant="8" id="Zyc-7W-HfV"/>
-                                        <constraint firstItem="rJk-Qt-8JK" firstAttribute="leading" secondItem="JlM-d1-wLs" secondAttribute="leadingMargin" id="bjw-YN-lCP"/>
+                                        <constraint firstItem="rJk-Qt-8JK" firstAttribute="leading" secondItem="JlM-d1-wLs" secondAttribute="leadingMargin" constant="-4" id="bjw-YN-lCP"/>
                                         <constraint firstItem="Xec-1b-xNT" firstAttribute="leading" secondItem="MEg-A4-q2V" secondAttribute="trailing" constant="5" id="e3f-An-dnK"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Xec-1b-xNT" secondAttribute="trailing" id="kKO-de-Csi"/>
                                         <constraint firstAttribute="bottom" secondItem="wsx-xx-oOt" secondAttribute="bottom" constant="16" id="lA8-jE-Aph"/>

@@ -93,7 +93,6 @@ class RestaurantTableViewController: UITableViewController {
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
-    
     private func searchViewUI() {
         backgroundView.backgroundColor = .lightGray.withAlphaComponent(0.2)
         backgroundView.layer.cornerRadius = 10
@@ -107,6 +106,15 @@ class RestaurantTableViewController: UITableViewController {
         searchButton.setTitle("검색", for: .normal)
         searchButton.setTitleColor(.black, for: .normal)
         searchButton.setTitleColor(.gray, for: .highlighted)
+    }
+    
+    private func alertError() {
+        let alert = UIAlertController(title: "검색 결과가 없습니다", message: "다른 음식점을 찾아보세요", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "확인", style: .default)
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        present(alert, animated: true)
     }
     
 }

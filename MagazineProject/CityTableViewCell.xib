@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,9 +34,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-aM-Dcm">
-                        <rect key="frame" x="16" y="41" width="289.66666666666669" height="30"/>
+                        <rect key="frame" x="16" y="41" width="289.66666666666669" height="20.333333333333329"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="eFG-5e-LJy"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="eFG-5e-LJy"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -50,15 +51,13 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQE-LC-9Wt">
-                        <rect key="frame" x="16" y="76" width="289.66666666666669" height="20"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FH-xI-3sb" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="16" y="66.333333333333329" width="289.66666666666669" height="20"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="20" id="oc7-G4-0Ld"/>
+                            <constraint firstAttribute="height" constant="20" id="xn7-ot-KaE"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="FyT-Tv-bnv" secondAttribute="trailing" constant="16" id="1x1-ZD-HuV"/>
@@ -66,14 +65,14 @@
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9bL-Ph-lGk"/>
                     <constraint firstItem="ajb-g0-QXq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="AYL-db-j2c"/>
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="leading" secondItem="KgY-aM-Dcm" secondAttribute="trailing" constant="44" id="Grd-1L-QOF"/>
+                    <constraint firstItem="2FH-xI-3sb" firstAttribute="top" secondItem="KgY-aM-Dcm" secondAttribute="bottom" constant="5" id="alh-fI-GDF"/>
                     <constraint firstItem="KgY-aM-Dcm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dqM-B9-y8W"/>
                     <constraint firstItem="ajb-g0-QXq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ehg-Pv-29W"/>
                     <constraint firstAttribute="trailing" secondItem="8R6-yd-ij1" secondAttribute="trailing" constant="16" id="evP-oC-Xv3"/>
+                    <constraint firstItem="8R6-yd-ij1" firstAttribute="leading" secondItem="2FH-xI-3sb" secondAttribute="trailing" constant="44" id="fPs-8Y-WFi"/>
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="g0G-pn-fpi"/>
-                    <constraint firstItem="KQE-LC-9Wt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iOv-k9-Nu4"/>
-                    <constraint firstItem="KQE-LC-9Wt" firstAttribute="top" secondItem="KgY-aM-Dcm" secondAttribute="bottom" constant="5" id="l87-Fa-rfg"/>
-                    <constraint firstItem="8R6-yd-ij1" firstAttribute="leading" secondItem="KQE-LC-9Wt" secondAttribute="trailing" constant="44" id="scW-Kx-lbh"/>
                     <constraint firstItem="KgY-aM-Dcm" firstAttribute="top" secondItem="ajb-g0-QXq" secondAttribute="bottom" constant="5" id="tbt-0o-lg1"/>
+                    <constraint firstItem="2FH-xI-3sb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uCy-Jg-SXG"/>
                     <constraint firstItem="FyT-Tv-bnv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="yu2-Pp-KaB"/>
                 </constraints>
             </tableViewCellContentView>
@@ -81,8 +80,8 @@
             <connections>
                 <outlet property="cityImage" destination="8R6-yd-ij1" id="jfv-BT-7bR"/>
                 <outlet property="descriptionLabel" destination="KgY-aM-Dcm" id="ASQ-el-M4U"/>
-                <outlet property="etcLabel" destination="KQE-LC-9Wt" id="AxT-Bf-gps"/>
                 <outlet property="likeButton" destination="FyT-Tv-bnv" id="WSP-eG-ED4"/>
+                <outlet property="starLabel" destination="2FH-xI-3sb" id="nlI-B7-ccr"/>
                 <outlet property="titleLabel" destination="ajb-g0-QXq" id="raJ-Ep-HKi"/>
             </connections>
             <point key="canvasLocation" x="267.17557251908397" y="72.183098591549296"/>
@@ -90,5 +89,8 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Cosmos
 
 class CityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,13 +17,16 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cityTableView.rowHeight = 180
         
-        cityTableView.rowHeight = 200
         cityTableView.delegate = self
         cityTableView.dataSource = self
+        
         let xib = UINib(nibName: "CityTableViewCell", bundle: nil)
         cityTableView.register(xib, forCellReuseIdentifier: "CityTableViewCell")
         
+//        let adXib = UINib(nibName: "AdTableViewCell", bundle: nil)
+//        cityTableView.register(adXib, forCellReuseIdentifier: "AdTableViewCell")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,32 +34,35 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+    
         let data = list[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        cell.configureCell(data: data)
         
-        cell.titleLabel.text = data.title
-        cell.titleLabel.font = .boldSystemFont(ofSize: 17)
+        let containLike = data.like ?? false
+        let heart = containLike ? "heart.fill" : "heart"
+        let heartImage = UIImage(systemName: heart)
         
-        cell.descriptionLabel.text = data.description
-        cell.descriptionLabel.font = .systemFont(ofSize: 15)
-        cell.descriptionLabel.textColor = .lightGray
-        
-        cell.etcLabel.text = "별점"
-        cell.etcLabel.textColor = .lightGray.withAlphaComponent(0.5)
-        cell.etcLabel.font = .systemFont(ofSize: 13)
-        
-        let url = URL(string: data.travel_image ?? "")
-        cell.cityImage.kf.setImage(with: url, placeholder: UIImage(systemName: "heart"))
-        cell.cityImage.contentMode = .scaleAspectFill
-        cell.cityImage.layer.cornerRadius = 15
-        
+        cell.likeButton.setImage(heartImage, for: .normal)
         cell.likeButton.tintColor = .white
-        
+        cell.likeButton.tag = indexPath.row
+//        cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+//        
         return cell
+//        if !data.ad {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+//            cell.configureCell(data: data)
+//            return cell
+//        } 
+//        else {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+//            cell.configureCell(data: data)
+//            return cell
+//        }
     }
     
-
-        
-
-
+//    @objc func likeButtonTapped(_ sender: UIButton) {
+//        list[sender.tag].like?.toggle()
+//        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+//    }
 }

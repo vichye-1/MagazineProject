@@ -41,9 +41,6 @@ class RestaurantTableViewController: UITableViewController {
         cell.restaurantImage.contentMode = .scaleToFill
         cell.restaurantImage.layer.cornerRadius = 4
         
-        // index label
-        let idx = indexPath.row
-        
         cell.indexLabel.backgroundColor = .orange
         cell.indexLabel.layer.cornerRadius = 20
         cell.indexLabel.text = String(indexPath.row + 1)

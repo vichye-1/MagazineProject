@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,7 +97,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhA-T8-3uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2648.3720930232557" y="-355.36480686695279"/>
+            <point key="canvasLocation" x="2473" y="-537"/>
         </scene>
         <!--RESTAURANT-->
         <scene sceneID="8j9-Xh-k0X">
@@ -250,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tak-Y0-D4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2646.5648854961833" y="410.56338028169017"/>
+            <point key="canvasLocation" x="2518" y="111"/>
         </scene>
         <!--TRAVEL-->
         <scene sceneID="ptv-Bf-FQF">
@@ -269,7 +270,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCN-gY-UE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="-348"/>
+            <point key="canvasLocation" x="1726" y="-537"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TZN-yr-aRG">
@@ -284,6 +285,7 @@
                     <connections>
                         <segue destination="hQQ-Dx-Yuz" kind="relationship" relationship="viewControllers" id="2NV-Fo-7ze"/>
                         <segue destination="Ys2-xy-7SQ" kind="relationship" relationship="viewControllers" id="pWn-iY-al5"/>
+                        <segue destination="piq-ro-Bhb" kind="relationship" relationship="viewControllers" id="ji6-cc-kBZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzf-sS-dyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -307,12 +309,73 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzd-lv-z2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="399"/>
+            <point key="canvasLocation" x="1726" y="123"/>
+        </scene>
+        <!--도시 상세 정보-->
+        <scene sceneID="08u-a8-FVc">
+            <objects>
+                <viewController id="dnP-Ry-oWJ" customClass="CityViewController" customModule="MagazineProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amx-jq-i21">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LiZ-MM-kZd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7LG-L0-OO9">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7LG-L0-OO9" id="lYl-Rb-SSW">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gl2-an-hwd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LiZ-MM-kZd" firstAttribute="leading" secondItem="Gl2-an-hwd" secondAttribute="leading" id="BlV-Eq-CHm"/>
+                            <constraint firstItem="LiZ-MM-kZd" firstAttribute="top" secondItem="Gl2-an-hwd" secondAttribute="top" id="LU3-FK-QfE"/>
+                            <constraint firstItem="Gl2-an-hwd" firstAttribute="trailing" secondItem="LiZ-MM-kZd" secondAttribute="trailing" id="a1f-7W-esG"/>
+                            <constraint firstItem="Gl2-an-hwd" firstAttribute="bottom" secondItem="LiZ-MM-kZd" secondAttribute="bottom" id="g3t-jg-TOc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="도시 상세 정보" id="DnN-XK-xmi"/>
+                    <connections>
+                        <outlet property="cityTableView" destination="LiZ-MM-kZd" id="cep-GB-oyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xjo-Zr-nJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652.6717557251909" y="873.94366197183103"/>
+        </scene>
+        <!--인기 도시-->
+        <scene sceneID="XXF-1I-GZh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="piq-ro-Bhb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="인기 도시" image="building.2.crop.circle" catalog="system" id="FGS-1I-xBq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fij-IG-1yY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dnP-Ry-oWJ" kind="relationship" relationship="rootViewController" id="lE3-OJ-AbI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XE5-w2-UIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.9541984732823" y="873.94366197183103"/>
         </scene>
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="building.2.crop.circle" catalog="system" width="128" height="123"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

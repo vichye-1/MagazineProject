@@ -20,6 +20,10 @@
 		EFC8FA9E2C02ED6100178594 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA9D2C02ED6100178594 /* RestaurantTableViewCell.swift */; };
 		EFC8FAA02C02ED7A00178594 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA9F2C02ED7A00178594 /* RestaurantTableViewController.swift */; };
 		EFC8FAA22C0377A900178594 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FAA12C0377A800178594 /* Restaurant.swift */; };
+		EFC8FABD2C04699800178594 /* TravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FABC2C04699800178594 /* TravelModel.swift */; };
+		EFC8FAC22C04853600178594 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FAC12C04853600178594 /* CityViewController.swift */; };
+		EFC8FAC52C0486BD00178594 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FAC32C0486BD00178594 /* CityTableViewCell.swift */; };
+		EFC8FAC62C0486BD00178594 /* CityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC8FAC42C0486BD00178594 /* CityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		EFC8FA9D2C02ED6100178594 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		EFC8FA9F2C02ED7A00178594 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		EFC8FAA12C0377A800178594 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		EFC8FABC2C04699800178594 /* TravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModel.swift; sourceTree = "<group>"; };
+		EFC8FAC12C04853600178594 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
+		EFC8FAC32C0486BD00178594 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		EFC8FAC42C0486BD00178594 /* CityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +89,12 @@
 				EFC8FA892C01BF9700178594 /* Assets.xcassets */,
 				EFC8FA8B2C01BF9700178594 /* LaunchScreen.storyboard */,
 				EFC8FA8E2C01BF9700178594 /* Info.plist */,
-				EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */,
+				EFC8FAC12C04853600178594 /* CityViewController.swift */,
+				EFC8FAC32C0486BD00178594 /* CityTableViewCell.swift */,
+				EFC8FAC42C0486BD00178594 /* CityTableViewCell.xib */,
 				EFC8FAA12C0377A800178594 /* Restaurant.swift */,
+				EFC8FABC2C04699800178594 /* TravelModel.swift */,
+				EFC8FA982C01CC9C00178594 /* MagazineInfo.swift */,
 			);
 			path = MagazineProject;
 			sourceTree = "<group>";
@@ -153,6 +165,7 @@
 			files = (
 				EFC8FA8A2C01BF9700178594 /* Assets.xcassets in Resources */,
 				EFC8FA8D2C01BF9700178594 /* Base in Resources */,
+				EFC8FAC62C0486BD00178594 /* CityTableViewCell.xib in Resources */,
 				EFC8FA882C01BF9600178594 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +182,10 @@
 				EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */,
 				EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */,
 				EFC8FA952C01C3F500178594 /* TravelTableViewController.swift in Sources */,
+				EFC8FAC22C04853600178594 /* CityViewController.swift in Sources */,
+				EFC8FAC52C0486BD00178594 /* CityTableViewCell.swift in Sources */,
 				EFC8FA9E2C02ED6100178594 /* RestaurantTableViewCell.swift in Sources */,
+				EFC8FABD2C04699800178594 /* TravelModel.swift in Sources */,
 				EFC8FAA02C02ED7A00178594 /* RestaurantTableViewController.swift in Sources */,
 				EFC8FA992C01CC9C00178594 /* MagazineInfo.swift in Sources */,
 				EFC8FAA22C0377A900178594 /* Restaurant.swift in Sources */,

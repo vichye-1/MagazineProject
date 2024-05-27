@@ -49,6 +49,8 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.cityImage.contentMode = .scaleAspectFill
         cell.cityImage.layer.cornerRadius = 15
         
+        cell.likeButton.tintColor = .white
+        
         return cell
     }
     

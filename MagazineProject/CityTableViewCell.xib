@@ -41,11 +41,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-Tv-bnv">
-                        <rect key="frame" x="425" y="24" width="43" height="38"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyT-Tv-bnv">
+                        <rect key="frame" x="427" y="16" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="5fT-HR-8iz"/>
+                            <constraint firstAttribute="width" constant="45" id="OvZ-Cy-Zbk"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQE-LC-9Wt">
                         <rect key="frame" x="16" y="76" width="289.66666666666669" height="20"/>
@@ -58,6 +61,7 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="FyT-Tv-bnv" secondAttribute="trailing" constant="16" id="1x1-ZD-HuV"/>
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="leading" secondItem="ajb-g0-QXq" secondAttribute="trailing" constant="44" id="5JZ-Wl-dgk"/>
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9bL-Ph-lGk"/>
                     <constraint firstItem="ajb-g0-QXq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="AYL-db-j2c"/>
@@ -70,6 +74,7 @@
                     <constraint firstItem="KQE-LC-9Wt" firstAttribute="top" secondItem="KgY-aM-Dcm" secondAttribute="bottom" constant="5" id="l87-Fa-rfg"/>
                     <constraint firstItem="8R6-yd-ij1" firstAttribute="leading" secondItem="KQE-LC-9Wt" secondAttribute="trailing" constant="44" id="scW-Kx-lbh"/>
                     <constraint firstItem="KgY-aM-Dcm" firstAttribute="top" secondItem="ajb-g0-QXq" secondAttribute="bottom" constant="5" id="tbt-0o-lg1"/>
+                    <constraint firstItem="FyT-Tv-bnv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="yu2-Pp-KaB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -83,4 +88,7 @@
             <point key="canvasLocation" x="267.17557251908397" y="72.183098591549296"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+    </resources>
 </document>

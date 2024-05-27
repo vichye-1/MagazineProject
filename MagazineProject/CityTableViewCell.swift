@@ -39,6 +39,7 @@ class CityTableViewCell: UITableViewCell {
             let imageURL = URL(string: url)
             cityImage.kf.setImage(with: imageURL, placeholder: UIImage(systemName: "heart"))
             cityImage.contentMode = .scaleAspectFill
+            cityImage.layer.cornerRadius = 15
         } else {
             cityImage.image = UIImage(systemName: "timer")
         }
@@ -51,21 +52,6 @@ class CityTableViewCell: UITableViewCell {
         starLabel.settings.filledColor = UIColor.systemYellow
         starLabel.settings.emptyBorderColor = UIColor.systemYellow
         starLabel.settings.filledBorderColor = UIColor.systemYellow
-        
-                
-        
-        /**
-         let bookmark = data.like ? "bookmark.fill" : "bookmark"
-         let image = UIImage(systemName: bookmark)
-         
-         cell.saveButton.tag = indexPath.row
-         cell.saveButton.setImage(image, for: .normal)
-         cell.saveButton.addTarget(self, action: #selector(saveButtonClicked), for: .touchUpInside)
-         cell.saveButton.backgroundColor = .lightGray
-         cell.saveButton.layer.cornerRadius = cell.saveButton.layer.frame.size.width / 2
-         cell.saveButton.tintColor = .white
-
-         */
     }
     
 }

@@ -10,17 +10,32 @@ import Kingfisher
 
 class RestaurantTableViewController: UITableViewController {
     
-    @IBOutlet var backgroundView: UIView!
-    @IBOutlet var searchTextField: UITextField!
-    @IBOutlet var searchButton: UIButton!
+    @IBOutlet var searchBar: UISearchBar!
     
     var list = RestaurantList().restaurantArray
+    var filteredList: [Restaurant] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchViewUI()
+        
+        let cheap = UIBarButtonItem(title: "만원 이하", style: .plain, target: self, action: #selector(cheapButtonClicked))
+        let korean = UIBarButtonItem(title: "한식", style: .plain, target: self, action: #selector(koreanButtonClicked))
+        let all = UIBarButtonItem(title: "전체보기", style: .plain, target: self, action: #selector(allButtonClicked))
     }
-
+    
+    @objc func cheapButtonClicked() {
+        
+    }
+    
+    @objc func koreanButtonClicked() {
+        
+    }
+    
+    @objc func allButtonClicked() {
+        filteredList = list
+        
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -89,22 +104,7 @@ class RestaurantTableViewController: UITableViewController {
         list[sender.tag].like.toggle()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
-    
-    private func searchViewUI() {
-        backgroundView.backgroundColor = .lightGray.withAlphaComponent(0.2)
-        backgroundView.layer.cornerRadius = 10
         
-        searchTextField.borderStyle = .none
-        searchTextField.backgroundColor = .clear
-        searchTextField.placeholder = "가고싶은 음식점명 또는 지역을 입력해주세요"
-        
-        searchButton.backgroundColor = .lightGray.withAlphaComponent(0.4)
-        searchButton.layer.cornerRadius = 7
-        searchButton.setTitle("검색", for: .normal)
-        searchButton.setTitleColor(.black, for: .normal)
-        searchButton.setTitleColor(.gray, for: .highlighted)
-    }
-    
     private func alertError() {
         let alert = UIAlertController(title: "검색 결과가 없습니다", message: "다른 음식점을 찾아보세요", preferredStyle: .alert)
         let confirm = UIAlertAction(title: "확인", style: .default)

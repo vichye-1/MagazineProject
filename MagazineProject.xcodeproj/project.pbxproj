@@ -69,6 +69,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF4B6EDC2C05CB4100F6E5B3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EFC8FACE2C04C82200178594 /* UILabel+Extension.swift */,
+				EFC8FAD42C04EAA600178594 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF4B6EDD2C05CB6E00F6E5B3 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				EFC8FAC12C04853600178594 /* CityViewController.swift */,
+				EFC8FAC32C0486BD00178594 /* CityTableViewCell.swift */,
+				EFC8FAC42C0486BD00178594 /* CityTableViewCell.xib */,
+				EFC8FACA2C04C28D00178594 /* AdTableViewCell.swift */,
+				EFC8FACB2C04C28D00178594 /* AdTableViewCell.xib */,
+				EFC8FABC2C04699800178594 /* TravelModel.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
 		EFC8FA742C01BF9600178594 = {
 			isa = PBXGroup;
 			children = (
@@ -95,14 +117,8 @@
 				EFC8FA862C01BF9600178594 /* Main.storyboard */,
 				EFC8FAD12C04D64F00178594 /* Travel */,
 				EFC8FAD02C04D61600178594 /* Restaurant */,
-				EFC8FAC12C04853600178594 /* CityViewController.swift */,
-				EFC8FAC32C0486BD00178594 /* CityTableViewCell.swift */,
-				EFC8FAC42C0486BD00178594 /* CityTableViewCell.xib */,
-				EFC8FACA2C04C28D00178594 /* AdTableViewCell.swift */,
-				EFC8FACB2C04C28D00178594 /* AdTableViewCell.xib */,
-				EFC8FACE2C04C82200178594 /* UILabel+Extension.swift */,
-				EFC8FAD42C04EAA600178594 /* UIView+Extension.swift */,
-				EFC8FABC2C04699800178594 /* TravelModel.swift */,
+				EF4B6EDD2C05CB6E00F6E5B3 /* City */,
+				EF4B6EDC2C05CB4100F6E5B3 /* Extension */,
 				EFC8FA892C01BF9700178594 /* Assets.xcassets */,
 				EFC8FA8E2C01BF9700178594 /* Info.plist */,
 			);

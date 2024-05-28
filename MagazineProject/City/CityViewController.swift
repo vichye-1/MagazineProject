@@ -39,7 +39,6 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let data = list[indexPath.row]
         
         if !data.ad {
@@ -60,7 +59,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func likeButtonTapped(_ sender: UIButton) {
         list[sender.tag].like?.toggle()
-        cityTableView.reloadRows(at: [IndexPath(row: sender.tag,section: 0)], with: .automatic)
-        //cityTableView.reloadData()
+        cityTableView.reloadRows(at: [IndexPath(row: sender.tag,section: 0)], with: .automatic) // 깜빡거림
+        //cityTableView.reloadData() - 안 깜빡거림
     }
 }

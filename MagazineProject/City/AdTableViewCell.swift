@@ -8,7 +8,8 @@
 import UIKit
 
 class AdTableViewCell: UITableViewCell {
-
+    
+    static let adIdentifier = "AdTableViewCell"
     
     @IBOutlet var adBackgroundView: UIView!
     @IBOutlet var adTitleLabel: UILabel!
@@ -17,7 +18,6 @@ class AdTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
-        
     }
 
     func configureLayout() {

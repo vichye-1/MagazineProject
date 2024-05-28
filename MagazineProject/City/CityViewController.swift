@@ -23,11 +23,11 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         cityTableView.delegate = self
         cityTableView.dataSource = self
         
-        let xib = UINib(nibName: "CityTableViewCell", bundle: nil)
-        cityTableView.register(xib, forCellReuseIdentifier: "CityTableViewCell")
+        let xib = UINib(nibName: CityTableViewCell.cityIdentifier, bundle: nil)
+        cityTableView.register(xib, forCellReuseIdentifier: CityTableViewCell.cityIdentifier)
         
-        let adXib = UINib(nibName: "AdTableViewCell", bundle: nil)
-        cityTableView.register(adXib, forCellReuseIdentifier: "AdTableViewCell")
+        let adXib = UINib(nibName: AdTableViewCell.adIdentifier, bundle: nil)
+        cityTableView.register(adXib, forCellReuseIdentifier: AdTableViewCell.adIdentifier)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -42,7 +42,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         let data = list[indexPath.row]
         
         if !data.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.cityIdentifier, for: indexPath) as! CityTableViewCell
             cell.configureCell(data: data)
             
             cell.likeButton.tag = indexPath.row
@@ -52,7 +52,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+        let cell = cityTableView.dequeueReusableCell(withIdentifier: AdTableViewCell.adIdentifier, for: indexPath) as! AdTableViewCell
         cell.configureCell(data: data)
         return cell
     }

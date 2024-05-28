@@ -30,10 +30,10 @@ extension UILabel {
     
     func adBadgeLabelUI() {
         self.text = "AD"
-        self.font = .boldSystemFont(ofSize: 17)
+        self.font = .systemFont(ofSize: 15)
         self.backgroundColor = .white
         self.textAlignment = .center
         self.clipsToBounds = true
-        self.layer.cornerRadius = 5
+        self.layer.cornerRadius = 8
     }
 }

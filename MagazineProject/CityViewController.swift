@@ -31,7 +31,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return list[indexPath.row].ad ? 130 : 160
+        return list[indexPath.row].ad ? 120 : 160
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +41,6 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = list[indexPath.row]
-        //cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
         
         if !data.ad {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
@@ -50,8 +49,8 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.likeButton.tag = indexPath.row
             cell.likeButton.tintColor = .white
             cell.likeButton.tag = indexPath.row
-            //cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
-
+            cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+            
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
@@ -59,8 +58,9 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    //    @objc func likeButtonTapped(_ sender: UIButton) {
-    //        list[sender.tag].like?.toggle()
-    //        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-    //    }
+    @objc func likeButtonTapped(_ sender: UIButton) {
+        list[sender.tag].like?.toggle()
+        cityTableView.reloadRows(at: [IndexPath(row: sender.tag,section: 0)], with: .automatic)
+        //cityTableView.reloadData()
+    }
 }

@@ -38,7 +38,7 @@ class CityTableViewCell: UITableViewCell {
         
         if let url = data.travel_image {
             let imageURL = URL(string: url)
-            cityImage.kf.setImage(with: imageURL, placeholder: UIImage(systemName: "heart"))
+            cityImage.kf.setImage(with: imageURL, placeholder: UIImage(systemName: "timer"))
             cityImage.contentMode = .scaleAspectFill
             cityImage.layer.cornerRadius = 15
         } else {

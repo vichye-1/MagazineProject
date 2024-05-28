@@ -32,7 +32,8 @@ extension UILabel {
         self.text = "AD"
         self.font = .boldSystemFont(ofSize: 17)
         self.backgroundColor = .white
-        self.layer.cornerRadius = 15
         self.textAlignment = .center
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 5
     }
 }

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantTableViewCell" rowHeight="184" id="KGk-i7-Jjw" customClass="RestaurantTableViewCell" customModule="MagazineProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="184"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="472" height="184"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-7R-zMV">
+                        <rect key="frame" x="16" y="16" width="152" height="152"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="WBr-7R-zMV" secondAttribute="height" id="Q3q-ME-uNF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="카페, 디저트, 잠실" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-6M-aIo">
+                        <rect key="frame" x="184" y="16" width="208" height="31"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="런던 베이글 뮤지엄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-e4-xpf">
+                        <rect key="frame" x="184" y="59" width="202" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuA-kn-Tzj">
+                        <rect key="frame" x="184" y="140" width="224" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmX-ak-gnf">
+                        <rect key="frame" x="402" y="75" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="qUS-i5-TVs"/>
+                            <constraint firstAttribute="height" constant="34" id="xr3-am-XSA"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Nd-3or">
+                        <rect key="frame" x="16" y="16" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="cxO-zV-jHW"/>
+                            <constraint firstAttribute="height" constant="30" id="wLO-m1-lJT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WBr-7R-zMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1KN-IL-mra"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="nuA-kn-Tzj" secondAttribute="bottom" constant="12" id="1ZK-8Q-X14"/>
+                    <constraint firstAttribute="trailing" secondItem="O9r-6M-aIo" secondAttribute="trailing" constant="80" id="1ue-Tg-JT5"/>
+                    <constraint firstItem="O9r-6M-aIo" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="7Qm-Xi-iTC"/>
+                    <constraint firstAttribute="bottom" secondItem="WBr-7R-zMV" secondAttribute="bottom" constant="16" id="Exj-16-jNm"/>
+                    <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Fvw-Vz-NwY"/>
+                    <constraint firstItem="O9r-6M-aIo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="I8M-WA-och"/>
+                    <constraint firstItem="nuA-kn-Tzj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fTE-e4-xpf" secondAttribute="bottom" constant="60" id="JKX-oP-usR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SmX-ak-gnf" secondAttribute="trailing" constant="16" id="LCl-Ki-rmZ"/>
+                    <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="u1G-Nd-3or" secondAttribute="top" id="Spp-2c-cv0"/>
+                    <constraint firstItem="fTE-e4-xpf" firstAttribute="top" secondItem="O9r-6M-aIo" secondAttribute="bottom" constant="12" id="a2o-tO-aw5"/>
+                    <constraint firstItem="SmX-ak-gnf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dtt-Rb-ugx"/>
+                    <constraint firstItem="fTE-e4-xpf" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="eUi-sZ-ytm"/>
+                    <constraint firstAttribute="trailing" secondItem="nuA-kn-Tzj" secondAttribute="trailing" constant="64" id="kfd-gB-3Ij"/>
+                    <constraint firstItem="SmX-ak-gnf" firstAttribute="leading" secondItem="fTE-e4-xpf" secondAttribute="trailing" constant="16" id="umV-5M-8xF"/>
+                    <constraint firstItem="WBr-7R-zMV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vkM-E8-GWe"/>
+                    <constraint firstItem="nuA-kn-Tzj" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="wbe-N2-are"/>
+                    <constraint firstItem="WBr-7R-zMV" firstAttribute="leading" secondItem="u1G-Nd-3or" secondAttribute="leading" id="yKF-Ss-jpu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookmarkButton" destination="SmX-ak-gnf" id="uvd-Sp-kLI"/>
+                <outlet property="descriptionLabel" destination="O9r-6M-aIo" id="BNm-rm-s94"/>
+                <outlet property="indexLabel" destination="u1G-Nd-3or" id="Gmh-ac-J9J"/>
+                <outlet property="phoneLabel" destination="nuA-kn-Tzj" id="nMp-GR-DvX"/>
+                <outlet property="restaurantImage" destination="WBr-7R-zMV" id="DfZ-Ab-ePL"/>
+                <outlet property="titleLabel" destination="fTE-e4-xpf" id="KRP-HA-OIs"/>
+            </connections>
+            <point key="canvasLocation" x="178.62595419847327" y="22.535211267605636"/>
+        </tableViewCell>
+    </objects>
+</document>

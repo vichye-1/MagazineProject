@@ -36,4 +36,10 @@ extension UILabel {
         self.clipsToBounds = true
         self.layer.cornerRadius = 8
     }
+    
+    func phoneNumberLabelUI() {
+        self.font = .systemFont(ofSize: 13)
+        self.textAlignment = .left
+        self.textColor = .lightGray
+    }
 }

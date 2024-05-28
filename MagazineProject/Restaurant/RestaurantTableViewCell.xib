@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="런던 베이글 뮤지엄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-e4-xpf">
-                        <rect key="frame" x="184" y="59" width="202" height="21"/>
+                        <rect key="frame" x="184" y="59" width="222" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SmX-ak-gnf">
-                        <rect key="frame" x="402" y="75" width="34" height="34"/>
+                        <rect key="frame" x="422" y="75" width="34" height="34"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="34" id="qUS-i5-TVs"/>
                             <constraint firstAttribute="height" constant="34" id="xr3-am-XSA"/>
@@ -50,7 +50,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Nd-3or">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Nd-3or">
                         <rect key="frame" x="16" y="16" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="cxO-zV-jHW"/>
@@ -70,7 +70,7 @@
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Fvw-Vz-NwY"/>
                     <constraint firstItem="O9r-6M-aIo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="I8M-WA-och"/>
                     <constraint firstItem="nuA-kn-Tzj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fTE-e4-xpf" secondAttribute="bottom" constant="60" id="JKX-oP-usR"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="SmX-ak-gnf" secondAttribute="trailing" constant="16" id="LCl-Ki-rmZ"/>
+                    <constraint firstAttribute="trailing" secondItem="SmX-ak-gnf" secondAttribute="trailing" constant="16" id="OFI-Rf-7uB"/>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="u1G-Nd-3or" secondAttribute="top" id="Spp-2c-cv0"/>
                     <constraint firstItem="fTE-e4-xpf" firstAttribute="top" secondItem="O9r-6M-aIo" secondAttribute="bottom" constant="12" id="a2o-tO-aw5"/>
                     <constraint firstItem="SmX-ak-gnf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dtt-Rb-ugx"/>
@@ -87,7 +87,7 @@
                 <outlet property="bookmarkButton" destination="SmX-ak-gnf" id="uvd-Sp-kLI"/>
                 <outlet property="descriptionLabel" destination="O9r-6M-aIo" id="BNm-rm-s94"/>
                 <outlet property="indexLabel" destination="u1G-Nd-3or" id="Gmh-ac-J9J"/>
-                <outlet property="phoneLabel" destination="nuA-kn-Tzj" id="nMp-GR-DvX"/>
+                <outlet property="priceLabel" destination="nuA-kn-Tzj" id="nMp-GR-DvX"/>
                 <outlet property="restaurantImage" destination="WBr-7R-zMV" id="DfZ-Ab-ePL"/>
                 <outlet property="titleLabel" destination="fTE-e4-xpf" id="KRP-HA-OIs"/>
             </connections>

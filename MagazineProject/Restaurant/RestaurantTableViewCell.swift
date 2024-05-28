@@ -16,7 +16,7 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var restaurantImage: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
     @IBOutlet var bookmarkButton: UIButton!
     
     
@@ -29,7 +29,9 @@ class RestaurantTableViewCell: UITableViewCell {
     func configureRestaurantLayout() {
         descriptionLabel.descriptionLabelUI()
         titleLabel.titleLabelUI()
-        phoneLabel.phoneNumberLabelUI()
+        priceLabel.phoneNumberLabelUI()
+        bookmarkButton.likeButtonUI()
+        indexLabel.indexLabelUI()
     }
     
     func configureRestaurantCell(data: Restaurant) {
@@ -47,10 +49,7 @@ class RestaurantTableViewCell: UITableViewCell {
         // title Label
         titleLabel.text = data.name
         
-        // phonenumber Label
-        phoneLabel.text = "☎️" + data.phoneNumber
-        
-        
-        
+        // price Label
+        priceLabel.text = "\(data.price)원대"
     }
 }

@@ -42,4 +42,12 @@ extension UILabel {
         self.textAlignment = .left
         self.textColor = .lightGray
     }
+    
+    func indexLabelUI() {
+        self.backgroundColor =  .systemOrange
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 5
+        self.font = .boldSystemFont(ofSize: 17)
+        self.textAlignment = .center
+    }
 }

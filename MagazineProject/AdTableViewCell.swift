@@ -23,11 +23,13 @@ class AdTableViewCell: UITableViewCell {
     func configureLayout() {
         adTitleLabel.adTitleLabelUI()
         adBackgroundView.adbackgroundViewUI()
+        adLabel.adBadgeLabelUI()
     }
     
     func configureCell(data: Travel) {
         adTitleLabel.text = data.title
         
-        adBackgroundView.backgroundColor = .gray
+        
+        
     }
 }

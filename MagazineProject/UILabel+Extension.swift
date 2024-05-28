@@ -22,9 +22,10 @@ extension UILabel {
     }
     
     func adTitleLabelUI() {
-        self.font = .boldSystemFont(ofSize: 20)
+        self.font = .boldSystemFont(ofSize: 17)
         self.textAlignment = .center
         self.textColor = .black
+        self.numberOfLines = 0
     }
     
     func adBadgeLabelUI() {

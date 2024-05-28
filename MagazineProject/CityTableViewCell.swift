@@ -25,6 +25,7 @@ class CityTableViewCell: UITableViewCell {
     func configureLayout() {
         titleLabel.titleLabelUI()
         descriptionLabel.descriptionLabelUI()
+        likeButton.tintColor = .white
     }
 
     func configureCell(data: Travel) {
@@ -43,6 +44,10 @@ class CityTableViewCell: UITableViewCell {
         } else {
             cityImage.image = UIImage(systemName: "timer")
         }
+        
+        let heart = data.like ?? false ? "heart.fill" : "heart"
+        let heartImage = UIImage(systemName: heart)
+        likeButton.setImage(heartImage, for: .normal)
         
         starLabel.rating = data.grade ?? 0
         starLabel.settings.updateOnTouch = false

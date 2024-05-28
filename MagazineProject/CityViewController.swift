@@ -18,6 +18,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         cityTableView.rowHeight = 180
+        // cityTableView.rowHeight = UITableView.automaticDimension
         
         cityTableView.delegate = self
         cityTableView.dataSource = self
@@ -25,8 +26,12 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         let xib = UINib(nibName: "CityTableViewCell", bundle: nil)
         cityTableView.register(xib, forCellReuseIdentifier: "CityTableViewCell")
         
-//        let adXib = UINib(nibName: "AdTableViewCell", bundle: nil)
-//        cityTableView.register(adXib, forCellReuseIdentifier: "AdTableViewCell")
+        let adXib = UINib(nibName: "AdTableViewCell", bundle: nil)
+        cityTableView.register(adXib, forCellReuseIdentifier: "AdTableViewCell")
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return list[indexPath.row].ad ? 130 : 160
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,35 +39,28 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
+        
         let data = list[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+        //cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+        
+        if !data.ad {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
+            cell.configureCell(data: data)
+            
+            cell.likeButton.tag = indexPath.row
+            cell.likeButton.tintColor = .white
+            cell.likeButton.tag = indexPath.row
+            //cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
         cell.configureCell(data: data)
-        
-        let containLike = data.like ?? false
-        let heart = containLike ? "heart.fill" : "heart"
-        let heartImage = UIImage(systemName: heart)
-        
-        cell.likeButton.setImage(heartImage, for: .normal)
-        cell.likeButton.tintColor = .white
-        cell.likeButton.tag = indexPath.row
-//        cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
-//        
         return cell
-//        if !data.ad {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
-//            cell.configureCell(data: data)
-//            return cell
-//        } 
-//        else {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
-//            cell.configureCell(data: data)
-//            return cell
-//        }
     }
     
-//    @objc func likeButtonTapped(_ sender: UIButton) {
-//        list[sender.tag].like?.toggle()
-//        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-//    }
+    //    @objc func likeButtonTapped(_ sender: UIButton) {
+    //        list[sender.tag].like?.toggle()
+    //        tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+    //    }
 }

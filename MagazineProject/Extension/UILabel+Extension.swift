@@ -9,20 +9,21 @@ import UIKit
 
 extension UILabel {
     func titleLabelUI() {
-        self.font = .boldSystemFont(ofSize: 17)
+        self.font = .boldSystemFont(ofSize: 15)
         self.textAlignment = .left
         self.textColor = .black
+        self.numberOfLines = 0
     }
     
     func descriptionLabelUI() {
-        self.font = .systemFont(ofSize: 15)
+        self.font = .systemFont(ofSize: 13)
         self.textColor = .lightGray
         self.textAlignment = .left
         self.numberOfLines = 0
     }
     
     func adTitleLabelUI() {
-        self.font = .boldSystemFont(ofSize: 17)
+        self.font = .boldSystemFont(ofSize: 15)
         self.textAlignment = .center
         self.textColor = .black
         self.numberOfLines = 0

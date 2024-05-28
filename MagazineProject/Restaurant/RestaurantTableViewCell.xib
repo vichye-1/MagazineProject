@@ -18,25 +18,22 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-7R-zMV">
-                        <rect key="frame" x="16" y="16" width="152" height="152"/>
+                        <rect key="frame" x="16" y="16" width="117" height="152"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="WBr-7R-zMV" secondAttribute="height" id="Q3q-ME-uNF"/>
+                            <constraint firstAttribute="width" secondItem="WBr-7R-zMV" secondAttribute="height" multiplier="1:1.3" id="Q3q-ME-uNF"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="카페, 디저트, 잠실" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-6M-aIo">
-                        <rect key="frame" x="184" y="16" width="208" height="31"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="런던 베이글 뮤지엄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-e4-xpf">
-                        <rect key="frame" x="184" y="59" width="222" height="21"/>
+                        <rect key="frame" x="149" y="16" width="243" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Und-1m-FQL"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuA-kn-Tzj">
-                        <rect key="frame" x="184" y="140" width="224" height="21"/>
+                        <rect key="frame" x="149" y="140" width="259" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,6 +57,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="런던 베이글 뮤지엄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-e4-xpf">
+                        <rect key="frame" x="149" y="40" width="243" height="20.333333333333329"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="xbP-6h-9cG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="1KN-IL-mra"/>
@@ -69,14 +75,13 @@
                     <constraint firstAttribute="bottom" secondItem="WBr-7R-zMV" secondAttribute="bottom" constant="16" id="Exj-16-jNm"/>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Fvw-Vz-NwY"/>
                     <constraint firstItem="O9r-6M-aIo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="I8M-WA-och"/>
-                    <constraint firstItem="nuA-kn-Tzj" firstAttribute="top" relation="lessThanOrEqual" secondItem="fTE-e4-xpf" secondAttribute="bottom" constant="60" id="JKX-oP-usR"/>
                     <constraint firstAttribute="trailing" secondItem="SmX-ak-gnf" secondAttribute="trailing" constant="16" id="OFI-Rf-7uB"/>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="top" secondItem="u1G-Nd-3or" secondAttribute="top" id="Spp-2c-cv0"/>
-                    <constraint firstItem="fTE-e4-xpf" firstAttribute="top" secondItem="O9r-6M-aIo" secondAttribute="bottom" constant="12" id="a2o-tO-aw5"/>
                     <constraint firstItem="SmX-ak-gnf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dtt-Rb-ugx"/>
-                    <constraint firstItem="fTE-e4-xpf" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="eUi-sZ-ytm"/>
+                    <constraint firstItem="fTE-e4-xpf" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="gS7-PR-XWo"/>
                     <constraint firstAttribute="trailing" secondItem="nuA-kn-Tzj" secondAttribute="trailing" constant="64" id="kfd-gB-3Ij"/>
-                    <constraint firstItem="SmX-ak-gnf" firstAttribute="leading" secondItem="fTE-e4-xpf" secondAttribute="trailing" constant="16" id="umV-5M-8xF"/>
+                    <constraint firstAttribute="trailing" secondItem="fTE-e4-xpf" secondAttribute="trailing" constant="80" id="rLe-aW-Rle"/>
+                    <constraint firstItem="fTE-e4-xpf" firstAttribute="top" secondItem="O9r-6M-aIo" secondAttribute="bottom" constant="4" id="uVV-3y-WzL"/>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vkM-E8-GWe"/>
                     <constraint firstItem="nuA-kn-Tzj" firstAttribute="leading" secondItem="WBr-7R-zMV" secondAttribute="trailing" constant="16" id="wbe-N2-are"/>
                     <constraint firstItem="WBr-7R-zMV" firstAttribute="leading" secondItem="u1G-Nd-3or" secondAttribute="leading" id="yKF-Ss-jpu"/>

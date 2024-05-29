@@ -23,6 +23,4 @@ class AdSpecificViewController: UIViewController {
     func xmarkClicked() {
         dismiss(animated: true)
     }
-    
-    
 }

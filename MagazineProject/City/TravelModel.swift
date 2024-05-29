@@ -14,6 +14,14 @@ struct Travel {
     let save: Int?
     var like: Bool?
     let ad: Bool
+    
+    var starDescription: String {
+        if let grade, let save {
+            return "\(grade) · 저장 \(save.formatted())"
+        } else {
+            return title
+        }
+    }
 }
 
 struct TravelInfo {

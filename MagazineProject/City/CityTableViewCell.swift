@@ -36,7 +36,7 @@ class CityTableViewCell: UITableViewCell {
         
         let saveStr = data.save?.formatted()
         
-        starLabel.text = "\(data.grade ?? 0) · 저장 \(saveStr ?? "0")"
+        starLabel.text = data.starDescription
         
         if let url = data.travel_image {
             let imageURL = URL(string: url)

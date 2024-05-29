@@ -73,6 +73,8 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             let cityStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
             let cityViewController = cityStoryBoard.instantiateViewController(withIdentifier: "CitySpecificViewController") as! CitySpecificViewController
+            let nav = UINavigationController(rootViewController: cityViewController)
+            nav.modalPresentationStyle = .fullScreen
             present(cityViewController, animated: true)
         }
         tableView.reloadRows(at: [indexPath], with: .automatic)

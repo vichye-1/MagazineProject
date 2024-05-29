@@ -12,6 +12,8 @@
 		EF4B6EE42C05FF0000F6E5B3 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */; };
 		EF4B6EE52C05FF0000F6E5B3 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */; };
 		EF89ADAE2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */; };
+		EF89ADB12C07071600AEDF6F /* CitySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */; };
+		EF89ADB32C07075C00AEDF6F /* AdSpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */; };
 		EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC273CD2C062C55001C400D /* UIButton+Extension.swift */; };
 		EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA802C01BF9600178594 /* AppDelegate.swift */; };
 		EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA822C01BF9600178594 /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySpecificStoryboard.storyboard; sourceTree = "<group>"; };
+		EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySpecificViewController.swift; sourceTree = "<group>"; };
+		EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpecificViewController.swift; sourceTree = "<group>"; };
 		EFC273CD2C062C55001C400D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		EFC8FA7D2C01BF9600178594 /* MagazineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagazineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC8FA802C01BF9600178594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				EFC8FACB2C04C28D00178594 /* AdTableViewCell.xib */,
 				EFC8FABC2C04699800178594 /* TravelModel.swift */,
 				EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */,
+				EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */,
+				EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -246,9 +252,11 @@
 				EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */,
 				EFC8FACC2C04C28D00178594 /* AdTableViewCell.swift in Sources */,
 				EF4B6EE42C05FF0000F6E5B3 /* RestaurantTableViewCell.swift in Sources */,
+				EF89ADB12C07071600AEDF6F /* CitySpecificViewController.swift in Sources */,
 				EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */,
 				EFC8FAD52C04EAA600178594 /* UIView+Extension.swift in Sources */,
 				EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */,
+				EF89ADB32C07075C00AEDF6F /* AdSpecificViewController.swift in Sources */,
 				EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */,
 				EFC8FA952C01C3F500178594 /* TravelTableViewController.swift in Sources */,
 				EFC8FAC22C04853600178594 /* CityViewController.swift in Sources */,

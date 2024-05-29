@@ -62,4 +62,19 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         cityTableView.reloadRows(at: [IndexPath(row: sender.tag,section: 0)], with: .automatic) // 깜빡거림
         //cityTableView.reloadData() - 안 깜빡거림
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = list[indexPath.row]
+        
+        if data.ad {
+            let adStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
+            let adViewController = adStoryBoard.instantiateViewController(withIdentifier: "AdSpecificViewController") as! AdSpecificViewController
+            navigationController?.pushViewController(adViewController, animated: true)
+        } else {
+            let cityStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
+            let cityViewController = cityStoryBoard.instantiateViewController(withIdentifier: "CitySpecificViewController") as! CitySpecificViewController
+            present(cityViewController, animated: true)
+        }
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 }

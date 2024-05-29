@@ -13,15 +13,15 @@ class AdSpecificViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "광고 화면"
-        let popButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkClicked))
+        let dismissButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkClicked))
         
-        navigationItem.setLeftBarButton(popButton, animated: true)
+        navigationItem.setLeftBarButton(dismissButton, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
     
     @objc
     func xmarkClicked() {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
     
     

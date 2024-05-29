@@ -69,13 +69,13 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         if data.ad {
             let adStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
             let adViewController = adStoryBoard.instantiateViewController(withIdentifier: "AdSpecificViewController") as! AdSpecificViewController
-            navigationController?.pushViewController(adViewController, animated: true)
+            let nav = UINavigationController(rootViewController: adViewController)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true)
         } else {
             let cityStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
             let cityViewController = cityStoryBoard.instantiateViewController(withIdentifier: "CitySpecificViewController") as! CitySpecificViewController
-            let nav = UINavigationController(rootViewController: cityViewController)
-            nav.modalPresentationStyle = .fullScreen
-            present(cityViewController, animated: true)
+            navigationController?.pushViewController(cityViewController, animated: true)
         }
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }

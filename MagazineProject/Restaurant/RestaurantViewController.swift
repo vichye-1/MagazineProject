@@ -47,7 +47,16 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         let index = indexPath.row
         cell.indexLabel.text = "\(index + 1)"
         
+        cell.bookmarkButton.tag = indexPath.row
+        cell.bookmarkButton.addTarget(self, action: #selector(bookmarkButtonClicked), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc
+    func bookmarkButtonClicked(_ sender: UIButton) {
+        filteredList[sender.tag].like.toggle()
+        foodTableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
     
     func filterButtons() {
@@ -70,7 +79,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
 
     }
     
-    @objc func cheapButtonClicked() {
+    @objc 
+    func cheapButtonClicked() {
         var cheapFood: [Restaurant] = []
         
         for item in list {
@@ -82,7 +92,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         foodTableView.reloadData()
     }
     
-    @objc func koreanButtonClicked() {
+    @objc 
+    func koreanButtonClicked() {
         var koreanFood: [Restaurant] = []
         
         for item in list {
@@ -94,7 +105,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         foodTableView.reloadData()
     }
     
-    @objc func cafeButtonClicked() {
+    @objc 
+    func cafeButtonClicked() {
         var cafeList: [Restaurant] = []
         
         for item in list {
@@ -106,7 +118,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         foodTableView.reloadData()
     }
     
-    @objc func allButtonClicked() {
+    @objc 
+    func allButtonClicked() {
         filteredList = list
         foodTableView.reloadData()
     }

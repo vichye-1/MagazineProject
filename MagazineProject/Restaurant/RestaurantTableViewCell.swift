@@ -51,5 +51,10 @@ class RestaurantTableViewCell: UITableViewCell {
         
         // price Label
         priceLabel.text = "\(data.price)원대"
+        
+        // bookmark Button
+        let bookmark = data.like ? "bookmark.fill" : "bookmark"
+        let bookmarkImage = UIImage(systemName: bookmark)
+        bookmarkButton.setImage(bookmarkImage, for: .normal)
     }
 }

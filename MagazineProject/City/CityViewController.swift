@@ -47,7 +47,6 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             cell.likeButton.tag = indexPath.row
             cell.likeButton.tintColor = .white
-            cell.likeButton.tag = indexPath.row
             cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
             
             return cell

@@ -96,7 +96,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhA-T8-3uM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="-537"/>
+            <point key="canvasLocation" x="-5" y="639"/>
         </scene>
         <!--TRAVEL-->
         <scene sceneID="ptv-Bf-FQF">
@@ -115,7 +115,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hCN-gY-UE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726" y="-537"/>
+            <point key="canvasLocation" x="-5" y="-151"/>
+        </scene>
+        <!--TravelInfoViewController-->
+        <scene sceneID="KAb-rK-a4d">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TravelInfoViewController" storyboardName="TravelInfoStoryboard" referencedIdentifier="TravelInfoViewController" id="Qfo-xw-dyp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fot-jF-UyM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXZ-Z8-3Nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="411"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TZN-yr-aRG">
@@ -131,11 +141,12 @@
                         <segue destination="hQQ-Dx-Yuz" kind="relationship" relationship="viewControllers" id="2NV-Fo-7ze"/>
                         <segue destination="piq-ro-Bhb" kind="relationship" relationship="viewControllers" id="ji6-cc-kBZ"/>
                         <segue destination="mfO-oR-xLo" kind="relationship" relationship="viewControllers" id="MLz-iR-n3R"/>
+                        <segue destination="T6o-M0-DP7" kind="relationship" relationship="viewControllers" id="5om-aT-dpq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzf-sS-dyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793.95348837209303" y="10.300429184549357"/>
+            <point key="canvasLocation" x="505" y="-1004"/>
         </scene>
         <!--RestaurantViewController-->
         <scene sceneID="umG-Ib-Nn6">
@@ -145,7 +156,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cm-6L-EqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585.4961832061067" y="98.591549295774655"/>
+            <point key="canvasLocation" x="-1173" y="639"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="08u-a8-FVc">
@@ -186,13 +197,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjo-Zr-nJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652.6717557251909" y="873.94366197183103"/>
+            <point key="canvasLocation" x="-2350" y="640"/>
         </scene>
-        <!--인기 도시-->
+        <!--도시 상세 정보-->
         <scene sceneID="XXF-1I-GZh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="piq-ro-Bhb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="인기 도시" image="building.2.crop.circle" catalog="system" id="FGS-1I-xBq"/>
+                    <tabBarItem key="tabBarItem" title="도시 상세 정보" image="magnifyingglass" catalog="system" id="FGS-1I-xBq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fij-IG-1yY">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -205,7 +216,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XE5-w2-UIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725.9541984732823" y="873.94366197183103"/>
+            <point key="canvasLocation" x="-2204" y="-151"/>
         </scene>
         <!--식당추천-->
         <scene sceneID="5gG-pJ-9e9">
@@ -224,13 +235,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnU-v4-eje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658.7786259541983" y="98.591549295774655"/>
+            <point key="canvasLocation" x="-1173" y="-151"/>
+        </scene>
+        <!--인기 도시-->
+        <scene sceneID="fAC-ze-aJx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T6o-M0-DP7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="인기 도시" image="building.2.crop.circle.fill" catalog="system" id="IxC-mQ-LM8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="axs-Ow-9ca">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qfo-xw-dyp" kind="relationship" relationship="rootViewController" id="WGT-KY-Ohj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3J-2h-CDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-151"/>
         </scene>
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
-        <image name="building.2.crop.circle" catalog="system" width="128" height="123"/>
+        <image name="building.2.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

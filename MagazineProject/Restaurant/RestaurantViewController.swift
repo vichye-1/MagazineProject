@@ -22,6 +22,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "식당 추천"
+        
         filteredList = list
         
         foodTableView.rowHeight = 180

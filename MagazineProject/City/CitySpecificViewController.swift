@@ -8,10 +8,22 @@
 import UIKit
 
 class CitySpecificViewController: UIViewController {
+    
+    @IBOutlet var citySpecificImage: UIImageView!
+    @IBOutlet var citySpecificTitle: UILabel!
+    @IBOutlet var cityReview: UILabel!
+    @IBOutlet var citySpecificDescription: UILabel!
+    
+    var passData: Travel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "관광지 화면"
+        guard let passData = passData else { return }
+        navigationItem.title = passData.title
+        citySpecificTitle.text = passData.title
+        cityReview.text = "\(passData.grade ?? 0.0) | \(passData.save ?? 0)명이 좋아해요"
+        citySpecificDescription.text = passData.description
+        
         let popButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicked))
         
         navigationItem.setLeftBarButton(popButton, animated: true)

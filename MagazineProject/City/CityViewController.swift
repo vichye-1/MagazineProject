@@ -74,6 +74,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             let cityStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
             let cityViewController = cityStoryBoard.instantiateViewController(withIdentifier: "CitySpecificViewController") as! CitySpecificViewController
+            cityViewController.passData = data
             navigationController?.pushViewController(cityViewController, animated: true)
         }
         tableView.reloadRows(at: [indexPath], with: .automatic)

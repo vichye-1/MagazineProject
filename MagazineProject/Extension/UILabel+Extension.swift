@@ -72,5 +72,12 @@ extension UILabel {
         self.textAlignment = .left
         self.numberOfLines = 0
     }
+    
+    func adSpecificTitleLabelUI() {
+        self.font = .boldSystemFont(ofSize: 20)
+        self.textAlignment = .center
+        self.textColor = .black
+        self.numberOfLines = 0
+    }
 
 }

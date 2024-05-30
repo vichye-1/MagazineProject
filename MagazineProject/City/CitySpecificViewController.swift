@@ -44,6 +44,8 @@ class CitySpecificViewController: UIViewController {
         specificLikeButton.setImage(UIImage(systemName: "heart"), for: .normal)
         specificLikeButton.tintColor = .white
         
+        locationButton.restaurantLocationButtonUI()
+        
         let popButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonClicked))
         
         navigationItem.setLeftBarButton(popButton, animated: true)

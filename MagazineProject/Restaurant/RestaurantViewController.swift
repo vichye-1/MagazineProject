@@ -24,6 +24,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
         navigationItem.title = "식당 추천"
         
+        let map = UIBarButtonItem(image: UIImage(systemName: "map"), style: .plain, target: self, action: #selector(mapButtonClicked))
+        
         filteredList = list
         
         foodTableView.rowHeight = 180
@@ -34,6 +36,12 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         foodTableView.register(foodXib, forCellReuseIdentifier: RestaurantTableViewCell.restaurantIdentifier)
         
         filterButtons()
+    }
+    
+    @objc
+    func mapButtonClicked() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "RestaurantMapViewController") as! RestaurantMapViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -24,5 +24,16 @@ extension UIButton {
         self.titleLabel?.font = .boldSystemFont(ofSize: 17)
     }
     
+    func restaurantLocationButtonUI() {
+        self.setImage(UIImage(systemName: "mappin"), for: .normal)
+        self.tintColor = .white
+        self.setTitle("  위치", for: .normal)
+        self.backgroundColor = .systemOrange
+        self.layer.cornerRadius = 15
+        self.titleLabel?.textAlignment = .center
+        self.titleLabel?.font = .boldSystemFont(ofSize: 17)
+        self.setTitleColor(.white, for: .normal)
+    }
+    
 }
 

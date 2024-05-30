@@ -18,6 +18,7 @@
 		EF89ADB82C072ED000AEDF6F /* TravelInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB72C072ED000AEDF6F /* TravelInfoViewController.swift */; };
 		EF89ADBA2C07313E00AEDF6F /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB92C07313E00AEDF6F /* CityInfo.swift */; };
 		EF89ADC52C0877C100AEDF6F /* CosmosView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */; };
+		EF89ADC72C08CD2C00AEDF6F /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADC62C08CD2B00AEDF6F /* RestaurantMapViewController.swift */; };
 		EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC273CD2C062C55001C400D /* UIButton+Extension.swift */; };
 		EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA802C01BF9600178594 /* AppDelegate.swift */; };
 		EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA822C01BF9600178594 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		EF89ADB72C072ED000AEDF6F /* TravelInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInfoViewController.swift; sourceTree = "<group>"; };
 		EF89ADB92C07313E00AEDF6F /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CosmosView+Extension.swift"; sourceTree = "<group>"; };
+		EF89ADC62C08CD2B00AEDF6F /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
 		EFC273CD2C062C55001C400D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		EFC8FA7D2C01BF9600178594 /* MagazineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagazineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC8FA802C01BF9600178594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				EF4B6EE02C05E80000F6E5B3 /* SearchRestaurant.storyboard */,
 				EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */,
 				EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */,
+				EF89ADC62C08CD2B00AEDF6F /* RestaurantMapViewController.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				EF89ADC52C0877C100AEDF6F /* CosmosView+Extension.swift in Sources */,
 				EF4B6EDF2C05E7A200F6E5B3 /* RestaurantViewController.swift in Sources */,
 				EF89ADBA2C07313E00AEDF6F /* CityInfo.swift in Sources */,
+				EF89ADC72C08CD2C00AEDF6F /* RestaurantMapViewController.swift in Sources */,
 				EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */,
 				EFC8FACC2C04C28D00178594 /* AdTableViewCell.swift in Sources */,
 				EF4B6EE42C05FF0000F6E5B3 /* RestaurantTableViewCell.swift in Sources */,

@@ -22,7 +22,7 @@ extension UIButton {
         self.layer.cornerRadius = 15
         self.titleLabel?.textAlignment = .center
         self.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        
     }
+    
 }
 

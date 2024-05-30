@@ -51,4 +51,26 @@ extension UILabel {
         self.font = .boldSystemFont(ofSize: 17)
         self.textAlignment = .center
     }
+    
+    func specificTitleLabelUI() {
+        self.font = .boldSystemFont(ofSize: 25)
+        self.textAlignment = .left
+        self.textColor = .black
+        self.numberOfLines = 0
+    }
+    
+    func specificStarLabelUI() {
+        self.font = .systemFont(ofSize: 15)
+        self.textColor = .lightGray
+        self.textAlignment = .left
+        self.numberOfLines = 0
+    }
+
+    func specificDescriptionLabelUI() {
+        self.font = .systemFont(ofSize: 17)
+        self.textColor = .black
+        self.textAlignment = .left
+        self.numberOfLines = 0
+    }
+
 }

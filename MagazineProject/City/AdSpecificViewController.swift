@@ -8,10 +8,16 @@
 import UIKit
 
 class AdSpecificViewController: UIViewController {
-
+    
+    @IBOutlet var adLabel: UILabel!
+    
+    var adPassData: Travel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        guard let adPassData = adPassData else { return }
+        adLabel.text = adPassData.title
+        
         navigationItem.title = "광고 화면"
         let dismissButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(xmarkClicked))
         

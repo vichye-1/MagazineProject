@@ -17,6 +17,7 @@
 		EF89ADB62C072EA400AEDF6F /* TravelInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89ADB52C072EA400AEDF6F /* TravelInfoStoryboard.storyboard */; };
 		EF89ADB82C072ED000AEDF6F /* TravelInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB72C072ED000AEDF6F /* TravelInfoViewController.swift */; };
 		EF89ADBA2C07313E00AEDF6F /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB92C07313E00AEDF6F /* CityInfo.swift */; };
+		EF89ADC52C0877C100AEDF6F /* CosmosView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */; };
 		EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC273CD2C062C55001C400D /* UIButton+Extension.swift */; };
 		EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA802C01BF9600178594 /* AppDelegate.swift */; };
 		EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA822C01BF9600178594 /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		EF89ADB52C072EA400AEDF6F /* TravelInfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TravelInfoStoryboard.storyboard; sourceTree = "<group>"; };
 		EF89ADB72C072ED000AEDF6F /* TravelInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInfoViewController.swift; sourceTree = "<group>"; };
 		EF89ADB92C07313E00AEDF6F /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
+		EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CosmosView+Extension.swift"; sourceTree = "<group>"; };
 		EFC273CD2C062C55001C400D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		EFC8FA7D2C01BF9600178594 /* MagazineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagazineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC8FA802C01BF9600178594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				EFC8FACE2C04C82200178594 /* UILabel+Extension.swift */,
 				EFC8FAD42C04EAA600178594 /* UIView+Extension.swift */,
 				EFC273CD2C062C55001C400D /* UIButton+Extension.swift */,
+				EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFC8FA852C01BF9600178594 /* ViewController.swift in Sources */,
+				EF89ADC52C0877C100AEDF6F /* CosmosView+Extension.swift in Sources */,
 				EF4B6EDF2C05E7A200F6E5B3 /* RestaurantViewController.swift in Sources */,
 				EF89ADBA2C07313E00AEDF6F /* CityInfo.swift in Sources */,
 				EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */,

@@ -68,6 +68,7 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         if data.ad {
             let adStoryBoard = UIStoryboard(name: "CitySpecificStoryboard", bundle: nil)
             let adViewController = adStoryBoard.instantiateViewController(withIdentifier: "AdSpecificViewController") as! AdSpecificViewController
+            adViewController.adPassData = data
             let nav = UINavigationController(rootViewController: adViewController)
             nav.modalPresentationStyle = .fullScreen
             present(nav, animated: true)

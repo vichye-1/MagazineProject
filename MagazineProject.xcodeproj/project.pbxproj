@@ -19,6 +19,8 @@
 		EF89ADBA2C07313E00AEDF6F /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB92C07313E00AEDF6F /* CityInfo.swift */; };
 		EF89ADC52C0877C100AEDF6F /* CosmosView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */; };
 		EF89ADC72C08CD2C00AEDF6F /* RestaurantMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADC62C08CD2B00AEDF6F /* RestaurantMapViewController.swift */; };
+		EF89ADD12C0CB85400AEDF6F /* CityLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89ADD02C0CB85400AEDF6F /* CityLocation.storyboard */; };
+		EF89ADD32C0CB8B600AEDF6F /* CityLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADD22C0CB8B600AEDF6F /* CityLocationViewController.swift */; };
 		EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC273CD2C062C55001C400D /* UIButton+Extension.swift */; };
 		EFC8FA812C01BF9600178594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA802C01BF9600178594 /* AppDelegate.swift */; };
 		EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC8FA822C01BF9600178594 /* SceneDelegate.swift */; };
@@ -55,6 +57,8 @@
 		EF89ADB92C07313E00AEDF6F /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityInfo.swift; sourceTree = "<group>"; };
 		EF89ADC42C0877C100AEDF6F /* CosmosView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CosmosView+Extension.swift"; sourceTree = "<group>"; };
 		EF89ADC62C08CD2B00AEDF6F /* RestaurantMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMapViewController.swift; sourceTree = "<group>"; };
+		EF89ADD02C0CB85400AEDF6F /* CityLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityLocation.storyboard; sourceTree = "<group>"; };
+		EF89ADD22C0CB8B600AEDF6F /* CityLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityLocationViewController.swift; sourceTree = "<group>"; };
 		EFC273CD2C062C55001C400D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		EFC8FA7D2C01BF9600178594 /* MagazineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagazineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC8FA802C01BF9600178594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */,
 				EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */,
 				EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */,
+				EF89ADD02C0CB85400AEDF6F /* CityLocation.storyboard */,
+				EF89ADD22C0CB8B600AEDF6F /* CityLocationViewController.swift */,
 			);
 			path = City;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF89ADD12C0CB85400AEDF6F /* CityLocation.storyboard in Resources */,
 				EF89ADAE2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard in Resources */,
 				EFC8FA8A2C01BF9700178594 /* Assets.xcassets in Resources */,
 				EFC8FACD2C04C28D00178594 /* AdTableViewCell.xib in Resources */,
@@ -288,6 +295,7 @@
 				EFC8FA972C01C40700178594 /* TravelTableViewCell.swift in Sources */,
 				EFC8FA952C01C3F500178594 /* TravelTableViewController.swift in Sources */,
 				EFC8FAC22C04853600178594 /* CityViewController.swift in Sources */,
+				EF89ADD32C0CB8B600AEDF6F /* CityLocationViewController.swift in Sources */,
 				EFC8FAC52C0486BD00178594 /* CityTableViewCell.swift in Sources */,
 				EFC8FABD2C04699800178594 /* TravelModel.swift in Sources */,
 				EFC8FACF2C04C82200178594 /* UILabel+Extension.swift in Sources */,

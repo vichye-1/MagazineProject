@@ -52,13 +52,7 @@ class CityTableViewCell: UITableViewCell {
         likeButton.setImage(heartImage, for: .normal)
         
         starLabel.rating = data.grade ?? 0
-        starLabel.settings.updateOnTouch = false
-        starLabel.settings.fillMode = .precise
-        starLabel.settings.starSize = 15
-        starLabel.settings.starMargin = 1
-        starLabel.settings.filledColor = UIColor.systemYellow
-        starLabel.settings.emptyBorderColor = UIColor.systemYellow
-        starLabel.settings.filledBorderColor = UIColor.systemYellow
+        starLabel.starUI()
     }
     
 }

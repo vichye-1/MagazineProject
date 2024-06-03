@@ -20,7 +20,20 @@ extension String {
             let convertStr = dateformatter.string(from: convertDate)
             return convertStr
         }
+        return nil
+    }
+    
+    var chatDateStr: String? {
+        let date = self
+        let myFormatter = DateFormatter()
+        myFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         
+        if let convertDate = myFormatter.date(from: date) {
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "yy.MM.dd"
+            let convertStr = dateformatter.string(from: convertDate)
+            return convertStr
+        }
         return nil
     }
 }

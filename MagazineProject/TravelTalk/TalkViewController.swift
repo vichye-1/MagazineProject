@@ -11,7 +11,7 @@ class TalkViewController: UIViewController {
     
     @IBOutlet var chatTableView: UITableView!
     
-    let list = mockChatList
+    let chatList = mockChatList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ extension TalkViewController: UITableViewDelegate,
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -30,8 +30,7 @@ class SingleChatTableViewCell: UITableViewCell {
         } else {
             profileImage.image = UIImage(named: chatImage[0])
             nickNameLabel.text = data.chatroomName
-            
-            
+            contentLabel.text = data.chatList.last?.message
         }
     }
     

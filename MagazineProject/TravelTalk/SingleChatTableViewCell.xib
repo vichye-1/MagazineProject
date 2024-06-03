@@ -57,6 +57,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="chatDateLabel" destination="toB-qs-f6h" id="gc3-ge-PEm"/>
+                <outlet property="contentLabel" destination="zh4-Vq-AFw" id="RlQ-PV-kdd"/>
+                <outlet property="nickNameLabel" destination="ymK-UC-b8e" id="wBV-6T-eOe"/>
+                <outlet property="profileImage" destination="gkM-04-q6l" id="qqT-3V-YE5"/>
+            </connections>
             <point key="canvasLocation" x="-111.45038167938931" y="-50.70422535211268"/>
         </tableViewCell>
     </objects>

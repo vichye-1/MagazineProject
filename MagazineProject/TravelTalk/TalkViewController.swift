@@ -11,8 +11,6 @@ class TalkViewController: UIViewController {
     
     @IBOutlet var chatTableView: UITableView!
     
-    let chatList = mockChatList
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "TRAVEL TALK"
@@ -27,7 +25,7 @@ class TalkViewController: UIViewController {
         let nib = UINib(nibName: identifier, bundle: nil)
         chatTableView.register(nib, forCellReuseIdentifier: identifier)
         
-        chatTableView.rowHeight = 70
+        chatTableView.rowHeight = 80
     }
 }
 
@@ -36,12 +34,16 @@ extension TalkViewController: UITableViewDelegate,
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatList.count
+        return mockChatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let talkData = mockChatList[indexPath.row]
         let identifier = SingleChatTableViewCell.identifier
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! SingleChatTableViewCell
+        
+        cell.configureSingleChatCell(data: talkData)
+        
         return cell
     }
     

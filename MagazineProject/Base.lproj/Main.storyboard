@@ -267,11 +267,11 @@
             </objects>
             <point key="canvasLocation" x="2856.4885496183206" y="-321.12676056338029"/>
         </scene>
-        <!--Item-->
+        <!--TRAVEL TALK-->
         <scene sceneID="jKT-EW-hpr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BUq-7E-JiJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5qD-g4-EgE"/>
+                    <tabBarItem key="tabBarItem" title="TRAVEL TALK" image="bubble.right.circle" catalog="system" id="5qD-g4-EgE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="udN-ot-4Y8">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -289,6 +289,7 @@
     </scenes>
     <resources>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
+        <image name="bubble.right.circle" catalog="system" width="128" height="123"/>
         <image name="building.2.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

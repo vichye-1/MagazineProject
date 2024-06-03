@@ -13,7 +13,7 @@ class TalkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "TRAVEL TALK"
         configureChatTableView()
     }
     

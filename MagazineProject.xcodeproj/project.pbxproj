@@ -12,6 +12,7 @@
 		EF4B6EE42C05FF0000F6E5B3 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */; };
 		EF4B6EE52C05FF0000F6E5B3 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */; };
 		EF79C2402C0E07E4009E66BD /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79C23F2C0E07E4009E66BD /* ChattingData.swift */; };
+		EF79C2422C0E1617009E66BD /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79C2412C0E1617009E66BD /* UIImageView+.swift */; };
 		EF89ADAE2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */; };
 		EF89ADB12C07071600AEDF6F /* CitySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */; };
 		EF89ADB32C07075C00AEDF6F /* AdSpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */; };
@@ -58,6 +59,7 @@
 		EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		EF79C23F2C0E07E4009E66BD /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
+		EF79C2412C0E1617009E66BD /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySpecificStoryboard.storyboard; sourceTree = "<group>"; };
 		EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySpecificViewController.swift; sourceTree = "<group>"; };
 		EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpecificViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				EFFA1B212C0DCF5500104037 /* UITableViewCell+.swift */,
 				EFFA1B232C0DCFBC00104037 /* UIViewController+.swift */,
 				EFFA1B252C0DD07300104037 /* String+.swift */,
+				EF79C2412C0E1617009E66BD /* UIImageView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				EFC8FA992C01CC9C00178594 /* MagazineInfo.swift in Sources */,
 				EFFA1B222C0DCF5500104037 /* UITableViewCell+.swift in Sources */,
 				EF89AE102C0DCB9B00AEDF6F /* TalkViewController.swift in Sources */,
+				EF79C2422C0E1617009E66BD /* UIImageView+.swift in Sources */,
 				EFFA1B292C0DD60E00104037 /* SingleChatTableViewCell.swift in Sources */,
 				EFFA1B262C0DD07300104037 /* String+.swift in Sources */,
 				EFC8FAA22C0377A900178594 /* Restaurant.swift in Sources */,

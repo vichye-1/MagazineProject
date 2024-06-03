@@ -16,11 +16,11 @@ class SingleChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        configureSingleChatLayout()
     }
     
     func configureSingleChatLayout() {
-        
+        profileImage.makeCircle()
     }
     
     func configureSingleChatCell(data: ChatRoom) {
@@ -29,6 +29,9 @@ class SingleChatTableViewCell: UITableViewCell {
             profileImage.image = UIImage(systemName: "star")
         } else {
             profileImage.image = UIImage(named: chatImage[0])
+            nickNameLabel.text = data.chatroomName
+            
+            
         }
     }
     

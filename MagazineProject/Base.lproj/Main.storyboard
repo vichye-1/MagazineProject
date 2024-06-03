@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="magazineCell" rowHeight="525" id="JvH-4s-f0M" customClass="TravelTableViewCell" customModule="MagazineProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelTableViewCell" rowHeight="525" id="JvH-4s-f0M" customClass="TravelTableViewCell" customModule="MagazineProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="525"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JvH-4s-f0M" id="U4o-Va-13r">
@@ -142,6 +142,7 @@
                         <segue destination="piq-ro-Bhb" kind="relationship" relationship="viewControllers" id="ji6-cc-kBZ"/>
                         <segue destination="mfO-oR-xLo" kind="relationship" relationship="viewControllers" id="MLz-iR-n3R"/>
                         <segue destination="T6o-M0-DP7" kind="relationship" relationship="viewControllers" id="5om-aT-dpq"/>
+                        <segue destination="BUq-7E-JiJ" kind="relationship" relationship="viewControllers" id="kNY-1e-waC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dzf-sS-dyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,6 +256,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3J-2h-CDJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="978" y="-151"/>
+        </scene>
+        <!--TravelTalk-->
+        <scene sceneID="uvq-A9-G2q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TravelTalk" id="Edu-sb-QL1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="sL4-ZP-p6o"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kse-L1-tCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2856.4885496183206" y="-321.12676056338029"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="jKT-EW-hpr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BUq-7E-JiJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5qD-g4-EgE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="udN-ot-4Y8">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Edu-sb-QL1" kind="relationship" relationship="rootViewController" id="e9J-gV-Pj4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqR-Wl-StA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="-280"/>
         </scene>
     </scenes>
     <resources>

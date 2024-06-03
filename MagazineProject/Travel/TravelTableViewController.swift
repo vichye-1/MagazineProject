@@ -33,23 +33,13 @@ class TravelTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "magazineCell", for: indexPath) as! TravelTableViewCell
+        let identifier = TravelTableViewCell.identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! TravelTableViewCell
         
         // kingfisher 라이브러리 사용해서 url상의 image 가져오기
         let data = list[indexPath.row]
         let urlString = data.photo_image
         let url = URL(string: urlString)
-        
-        // dateforamtter 이용해서 string -> yy년 MM월 dd일 형식으로 변환
-        let date = data.date
-        let myFormatter = DateFormatter()
-        myFormatter.dateFormat = "yyMMdd"
-        
-        let convertDate = myFormatter.date(from: date)
-        
-        let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yy년 MM월 dd일"
-        let convertStr = dateformatter.string(from: convertDate!)
         
         cell.MagazineImageView.kf.setImage(with: url)
         cell.MagazineImageView.contentMode = .scaleToFill
@@ -67,10 +57,12 @@ class TravelTableViewController: UITableViewController {
         cell.subtitleLabel.font = .boldSystemFont(ofSize: 17)
         cell.subtitleLabel.textAlignment = .left
         
-        cell.dateLabel.text = convertStr
-        cell.dateLabel.textAlignment = .right
-        cell.dateLabel.textColor = .lightGray
-        cell.dateLabel.font = .boldSystemFont(ofSize: 15)
+        if let date = data.date.korFullDateStr {
+            cell.dateLabel.text = date
+            cell.dateLabel.textAlignment = .right
+            cell.dateLabel.textColor = .lightGray
+            cell.dateLabel.font = .boldSystemFont(ofSize: 15)
+        }
         
         return cell
     }

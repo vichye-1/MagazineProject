@@ -11,6 +11,7 @@
 		EF4B6EE12C05E80000F6E5B3 /* SearchRestaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4B6EE02C05E80000F6E5B3 /* SearchRestaurant.storyboard */; };
 		EF4B6EE42C05FF0000F6E5B3 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */; };
 		EF4B6EE52C05FF0000F6E5B3 /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */; };
+		EF79C2402C0E07E4009E66BD /* ChattingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF79C23F2C0E07E4009E66BD /* ChattingData.swift */; };
 		EF89ADAE2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */; };
 		EF89ADB12C07071600AEDF6F /* CitySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */; };
 		EF89ADB32C07075C00AEDF6F /* AdSpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */; };
@@ -56,6 +57,7 @@
 		EF4B6EE02C05E80000F6E5B3 /* SearchRestaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchRestaurant.storyboard; sourceTree = "<group>"; };
 		EF4B6EE22C05FEFF00F6E5B3 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		EF4B6EE32C05FEFF00F6E5B3 /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
+		EF79C23F2C0E07E4009E66BD /* ChattingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChattingData.swift; sourceTree = "<group>"; };
 		EF89ADAD2C07044D00AEDF6F /* CitySpecificStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySpecificStoryboard.storyboard; sourceTree = "<group>"; };
 		EF89ADB02C07071600AEDF6F /* CitySpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySpecificViewController.swift; sourceTree = "<group>"; };
 		EF89ADB22C07075C00AEDF6F /* AdSpecificViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdSpecificViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,18 @@
 			path = City;
 			sourceTree = "<group>";
 		};
+		EF79C23E2C0E07B3009E66BD /* TravelTalk */ = {
+			isa = PBXGroup;
+			children = (
+				EF79C23F2C0E07E4009E66BD /* ChattingData.swift */,
+				EF89AE0D2C0DCB7B00AEDF6F /* TravelTalk.storyboard */,
+				EF89AE0F2C0DCB9B00AEDF6F /* TalkViewController.swift */,
+				EFFA1B272C0DD60E00104037 /* SingleChatTableViewCell.swift */,
+				EFFA1B282C0DD60E00104037 /* SingleChatTableViewCell.xib */,
+			);
+			path = TravelTalk;
+			sourceTree = "<group>";
+		};
 		EF89ADB42C072E8200AEDF6F /* TravelInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +183,7 @@
 		EFC8FA7F2C01BF9600178594 /* MagazineProject */ = {
 			isa = PBXGroup;
 			children = (
+				EF79C23E2C0E07B3009E66BD /* TravelTalk */,
 				EFFA1B1E2C0DCE9300104037 /* Protocol */,
 				EFC8FA802C01BF9600178594 /* AppDelegate.swift */,
 				EFC8FA822C01BF9600178594 /* SceneDelegate.swift */,
@@ -182,10 +197,6 @@
 				EF4B6EDC2C05CB4100F6E5B3 /* Extension */,
 				EFC8FA892C01BF9700178594 /* Assets.xcassets */,
 				EFC8FA8E2C01BF9700178594 /* Info.plist */,
-				EF89AE0D2C0DCB7B00AEDF6F /* TravelTalk.storyboard */,
-				EF89AE0F2C0DCB9B00AEDF6F /* TalkViewController.swift */,
-				EFFA1B272C0DD60E00104037 /* SingleChatTableViewCell.swift */,
-				EFFA1B282C0DD60E00104037 /* SingleChatTableViewCell.xib */,
 			);
 			path = MagazineProject;
 			sourceTree = "<group>";
@@ -321,6 +332,7 @@
 				EFFA1B202C0DCEAA00104037 /* ReuseIdentifierProtocol.swift in Sources */,
 				EFC273CE2C062C55001C400D /* UIButton+Extension.swift in Sources */,
 				EFC8FAD52C04EAA600178594 /* UIView+Extension.swift in Sources */,
+				EF79C2402C0E07E4009E66BD /* ChattingData.swift in Sources */,
 				EFC8FA832C01BF9600178594 /* SceneDelegate.swift in Sources */,
 				EF89ADB82C072ED000AEDF6F /* TravelInfoViewController.swift in Sources */,
 				EF89ADB32C07075C00AEDF6F /* AdSpecificViewController.swift in Sources */,

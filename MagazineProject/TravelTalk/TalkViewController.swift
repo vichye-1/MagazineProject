@@ -8,8 +8,10 @@
 import UIKit
 
 class TalkViewController: UIViewController {
-
+    
     @IBOutlet var chatTableView: UITableView!
+    
+    let list = mockChatList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,8 @@ class TalkViewController: UIViewController {
 
 extension TalkViewController: UITableViewDelegate,
                               UITableViewDataSource {
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }

@@ -24,6 +24,8 @@ class TalkViewController: UIViewController {
         let identifier = SingleChatTableViewCell.identifier
         let nib = UINib(nibName: identifier, bundle: nil)
         chatTableView.register(nib, forCellReuseIdentifier: identifier)
+        
+        chatTableView.rowHeight = 70
     }
 }
 

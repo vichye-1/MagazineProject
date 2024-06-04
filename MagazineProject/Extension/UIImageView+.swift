@@ -10,5 +10,6 @@ import UIKit
 extension UIImageView {
     func makeCircle() {
         self.layer.cornerRadius = self.frame.width / 2
+        self.contentMode = .scaleAspectFill
     }
 }

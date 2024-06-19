@@ -8,14 +8,26 @@
 import UIKit
 import MapKit
 
-class RestaurantMapViewController: UIViewController {
+final class RestaurantMapViewController: UIViewController {
 
     @IBOutlet var restaurantMapView: MKMapView!
+    let restaurantList = RestaurantList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         restaurantMapView.delegate = self
+        addRestaurants()
+    }
+    
+    private func addRestaurants() {
+        for restaurant in restaurantList.restaurantArray {
+            let annotation = MKPointAnnotation()
+            annotation.title = restaurant.name
+            annotation.subtitle = restaurant.address
+            annotation.coordinate = CLLocationCoordinate2D(latitude: restaurant.latitude, longitude: restaurant.longitude)
+            restaurantMapView.addAnnotation(annotation)
+        }
     }
     
 }

@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import CoreLocation
 import MapKit
 
 final class RestaurantMapViewController: UIViewController {
 
     @IBOutlet var restaurantMapView: MKMapView!
     let restaurantList = RestaurantList()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,5 +46,9 @@ final class RestaurantMapViewController: UIViewController {
 }
 
 extension RestaurantMapViewController: MKMapViewDelegate {
+    
+}
+
+extension RestaurantMapViewController: CLLocationManagerDelegate {
     
 }

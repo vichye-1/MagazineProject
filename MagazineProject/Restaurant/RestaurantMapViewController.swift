@@ -15,11 +15,11 @@ class RestaurantMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        restaurantMapView.delegate = self
     }
     
 }
 
-extension RestaurantViewController: MKMapViewDelegate {
+extension RestaurantMapViewController: MKMapViewDelegate {
     
 }

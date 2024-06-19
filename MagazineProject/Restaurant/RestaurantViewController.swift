@@ -10,7 +10,6 @@ import UIKit
 class RestaurantViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var foodTableView: UITableView!
-    
     @IBOutlet var cheapButton: UIButton!
     @IBOutlet var koreanButton: UIButton!
     @IBOutlet var cafeButton: UIButton!
@@ -30,14 +29,12 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         filteredList = list
-        
         foodTableView.rowHeight = 180
         foodTableView.delegate = self
         foodTableView.dataSource = self
         
         let foodXib = UINib(nibName: RestaurantTableViewCell.restaurantIdentifier, bundle: nil)
         foodTableView.register(foodXib, forCellReuseIdentifier: RestaurantTableViewCell.restaurantIdentifier)
-        
         filterButtons()
     }
     

@@ -18,6 +18,7 @@ final class RestaurantMapViewController: UIViewController {
         
         restaurantMapView.delegate = self
         addRestaurants()
+        configureMapView()
     }
     
     private func addRestaurants() {
@@ -30,6 +31,16 @@ final class RestaurantMapViewController: UIViewController {
         }
     }
     
+    private func configureMapView() {
+        var zoomRect = MKMapRect.null
+        
+        for restaurant in restaurantList.restaurantArray {
+            let annotationPoint = MKMapPoint(CLLocationCoordinate2D(latitude: restaurant.latitude, longitude: restaurant.longitude))
+            let pointRect = MKMapRect(x: annotationPoint.x, y: annotationPoint.y, width: 0.1, height: 0.1)
+            zoomRect = zoomRect.union(pointRect)
+        }
+        restaurantMapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), animated: true)
+    }
 }
 
 extension RestaurantMapViewController: MKMapViewDelegate {

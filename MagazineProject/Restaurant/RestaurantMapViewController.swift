@@ -14,7 +14,6 @@ final class RestaurantMapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var restaurantMapView: MKMapView!
     let restaurantList = RestaurantList()
     let locationManager = CLLocationManager()
-    
     let defaultCenter = CLLocationCoordinate2D(latitude: 37.517742, longitude: 126.886463)
     
     override func viewDidLoad() {
@@ -62,6 +61,7 @@ extension RestaurantMapViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
         case .denied:
+            goToSettingAlert()
             setRegionAndAnnotation(center: defaultCenter)
         case .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
@@ -70,6 +70,18 @@ extension RestaurantMapViewController {
         }
     }
     
+    private func goToSettingAlert() {
+            let alert = UIAlertController(title: "위치 권한을 거부하셨습니다", message: "이 앱을 사용하려면 위치 접근 권한을 설정해야합니다. 설정으로 이동하시겠습니까?", preferredStyle: .alert)
+            let yes = UIAlertAction(title: "확인", style: .default) { _ in
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+            let no = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+            alert.addAction(yes)
+            alert.addAction(no)
+            present(alert, animated: true, completion: nil)
+        }
 }
 
 extension RestaurantMapViewController: CLLocationManagerDelegate {

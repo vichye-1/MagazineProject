@@ -9,16 +9,16 @@ import UIKit
 import CoreLocation
 import MapKit
 
-final class RestaurantMapViewController: UIViewController {
+final class RestaurantMapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet var restaurantMapView: MKMapView!
     let restaurantList = RestaurantList()
     let locationManager = CLLocationManager()
     
+    let defaultCenter = CLLocationCoordinate2D(latitude: 37.517742, longitude: 126.886463)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        addRestaurants()
-        configureMapView()
         restaurantMapView.delegate = self
         locationManager.delegate = self
     }
@@ -33,22 +33,58 @@ final class RestaurantMapViewController: UIViewController {
         }
     }
     
-    private func configureMapView() {
-        var zoomRect = MKMapRect.null
-        
-        for restaurant in restaurantList.restaurantArray {
-            let annotationPoint = MKMapPoint(CLLocationCoordinate2D(latitude: restaurant.latitude, longitude: restaurant.longitude))
-            let pointRect = MKMapRect(x: annotationPoint.x, y: annotationPoint.y, width: 0.1, height: 0.1)
-            zoomRect = zoomRect.union(pointRect)
-        }
-        restaurantMapView.setVisibleMapRect(zoomRect, edgePadding: UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50), animated: true)
+    private func setRegionAndAnnotation(center: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
+        restaurantMapView.setRegion(region, animated: true)
+        addRestaurants()
     }
 }
 
-extension RestaurantMapViewController: MKMapViewDelegate {
+extension RestaurantMapViewController {
+    private func checkDeviceLocationAuthorization() {
+        if CLLocationManager.locationServicesEnabled() {
+            checkCurrentLocationAuthorization()
+        } else {
+            setRegionAndAnnotation(center: defaultCenter)
+        }
+    }
+    
+    private func checkCurrentLocationAuthorization() {
+        var status: CLAuthorizationStatus
+        
+        if #available(iOS 14.0, *) {
+            status = locationManager.authorizationStatus
+        } else {
+            status = CLLocationManager.authorizationStatus()
+        }
+        switch status {
+        case .notDetermined:
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
+        case .denied:
+            setRegionAndAnnotation(center: defaultCenter)
+        case .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        default:
+            print(status)
+        }
+    }
     
 }
 
 extension RestaurantMapViewController: CLLocationManagerDelegate {
-    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let coordinate = locations.last?.coordinate {
+            setRegionAndAnnotation(center: coordinate)
+        }
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
+        setRegionAndAnnotation(center: defaultCenter)
+    }
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkDeviceLocationAuthorization()
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print(#function)
+    }
 }

@@ -17,10 +17,10 @@ final class RestaurantMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        restaurantMapView.delegate = self
         addRestaurants()
         configureMapView()
+        restaurantMapView.delegate = self
+        locationManager.delegate = self
     }
     
     private func addRestaurants() {

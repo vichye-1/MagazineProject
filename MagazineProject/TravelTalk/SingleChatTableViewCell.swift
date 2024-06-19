@@ -21,6 +21,7 @@ class SingleChatTableViewCell: UITableViewCell {
     
     func configureSingleChatLayout() {
         profileImage.makeCircle()
+        
     }
     
     func configureSingleChatCell(data: ChatRoom) {

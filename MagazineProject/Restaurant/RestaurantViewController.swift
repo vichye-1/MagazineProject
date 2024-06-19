@@ -24,7 +24,9 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
         navigationItem.title = "식당 추천"
         
-        let map = UIBarButtonItem(image: UIImage(systemName: "map"), style: .plain, target: self, action: #selector(mapButtonClicked))
+        let mapButton = UIBarButtonItem(image: UIImage(systemName: "map"), style: .plain, target: self, action: #selector(mapButtonClicked))
+        
+        navigationItem.rightBarButtonItem = mapButton
         
         filteredList = list
         
